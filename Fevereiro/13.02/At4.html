@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nome do Logradouro: <input 
+    id="input_rua">
+
+    Número do Logradouro: <input  
+    id="input_numero">     
+
+    <button onclick="exibir_mensagem()">
+    Onde eu moro?
+    </button>
+
+</body>
+</html>
+<script>
+    function exibir_mensagem() {
+        alert("Seu logradouro é " + input_rua.value )
+        alert("O número do seu logradouro é: " + input_numero.value)
+    }
+</script>
+
+<!-- 
+4. Crie uma página que solicite ao usuário que digite o nome da rua/avenida/vila e o número da casa onde mora. 
+
+a) Deve haver um botão com o texto "Onde eu moro". 
+
+b) Ao clicar no botão, deve aparecer uma frase como esta na página: 
+
+"Seu logradouro é X" 
+
+c) Onde X é o valor que o usuário digitou no primeiro campo 
+
+d) Na sequência da mensagem acima deve aparecer: 
+
+"O número do seu logradouro é Y"  - Onde Y é o valor que o usuário digitou no segundo campo  -->

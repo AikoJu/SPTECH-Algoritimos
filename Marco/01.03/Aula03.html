@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03 (if, else)</title>
+</head>
+<body>
+    Media: <input 
+    id="inputMedia">
+
+    <button onclick="verAprovacao()">
+    Ver Aprovação</button>
+    <div id="divResultado"></div>
+</body>
+</html>
+    <script>
+function verAprovacao(){
+    var media = Number(inputMedia.value)
+
+    if (media > 6) {
+
+        divResultado.innerHTML = `Você está aprovado(a)!`
+    }
+
+    if (media <= 6) {
+
+        divResultado.innerHTML = `Você está reprovado(a)!`
+    }    
+}
+
+    </script>
+
+    <!-- = : atribuição
+        += :  -->

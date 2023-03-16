@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Atividade 04</title>
+</head>
+<body>
+    Sabor da pizza: <input 
+    id="input_sabor"> <br>
+    Valor da pizza: <input 
+    id="input_valor"><br>
+    Quantidade de amigos: <input 
+    id="input_amigos"><br>
+    <button onclick="divisao()">
+        Ver valor por amigo
+    </button>
+    <div id="div_pizza"></div>
+</body>
+</html>
+    <script>
+        function divisao(){
+            var sabor = input_sabor.value
+            var valor = Number(input_valor.value)
+            var amigos = Number(input_amigos.value)
+            var caixinha = (valor *10)/100
+            var total = valor + caixinha
+            var divamigos = total / amigos
+
+            div_pizza.innerHTML = `
+            Cada amigo vai colaborar com R$${divamigos} para a pizza de ${sabor}.
+            `
+    
+    }
+    </script>
+
+<!-- 4. Todo mundo gosta de pizza! É um prato super democrático, pois existem sabores veganos, vegetarianos, sem glúten, "low carb" (pouco carboidrato), doces etc. 
+
+Crie um programa em HTML/JS o qual:
+
+a) Solicite o sabor e o preço da pizza;
+
+b) Solicite a quantidade de amigos que vão comer;
+
+c) Ao clicar num botão "Ver valor por amigo", calcule e exiba na tela uma frase como esta:
+
+    Cada amigo vai colaborar com R$X para a pizza de Y.
+
+*Obs: inclua no valor da pizza a caixinha do entregador que é sempre 10% do valor da pizza.
+
+*Obs²: Y é o sabor da pizza; -->

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 14</title>
+</head>
+<body>
+    <h1 style="color: yellow;">Carrara Drivers</h1>
+    Seu nome: <input type="text" id="inputNome"><br>
+    Distância em km: <input type="text" id="inputDistancia"><br>
+    Bandeira: <input type="number" min="1" max="3" id="inputBandeira"><br>
+    Horário da corrida: <input type="number" min="0" max="23" id="inputHorario"><br>
+
+    <button onclick="corrida()">
+    Calcular corrida
+    </button><br>
+
+    <span id="spanCorrida"></span>
+</body>
+</html>
+<script>
+    function corrida(){
+        var nome = (inputNome.value)
+        var distancia = Number(inputDistancia.value)
+        var bandeira = Number(inputBandeira.value)
+        var horario = Number(inputHorario.value)
+        var valorBase = distancia * 1.25
+        var valorTotalCinco = valorBase + (valorBase * (bandeira * 0.05))
+        var valorTotalDez = valorBase + (valorBase * (bandeira * 0.10))
+        var valorTotalQuinze = valorBase + (valorBase * (bandeira * 0.15))  
+        var frase = `Olá ${nome} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia}km e o total da corrida será de `
+        
+        spanCorrida.innerHTML = frase + valorTotalCinco
+
+        if(horario >= 7){
+            spanCorrida.innerHTML = frase + valorTotalDez
+        }
+        
+        if(horario <= 23){
+            spanCorrida.innerHTML = frase + valorTotalQuinze
+        }
+
+        // Código da 1º vez que fiz
+        // if (bandeira == 1){
+        //     spanCorrida.innerHTML = frase + valorTotalCinco
+        //  if(horario >= 7 ){
+        //     spanCorrida.innerHTML = frase + valorTotalDez
+        //     if(horario <= 23){
+        //    spanCorrida.innerHTML = frase + valorTotalQuinze
+        //         }
+        //     }
+        // }
+        // if (bandeira == 2){
+        //     spanCorrida.innerHTML = frase + valorTotalCinco
+        //     if(horario >= 7){
+        //         spanCorrida.innerHTML = frase + valorTotalDez
+        //         if(horario <= 23){
+        //          spanCorrida.innerHTML = frase + valorTotalQuinze
+        //         }     
+     
+        //     }
+        // }
+        // if (bandeira == 3){
+        //     spanCorrida.innerHTML = frase + valorTotalCinco
+        //     if(horario >= 7){
+        //         spanCorrida.innerHTML = frase + valorTotalDez
+        //         if(horario <= 23){
+        //         spanCorrida.innerHTML = frase + valorTotalQuinze
+        //    }
+        //  }
+        // }
+    }
+</script>
+<!--  -->
+
+<!-- 14. Agostinho é um taxista do Rio de Janeiro que deseja automatizar sua frota de táxis (Carrara Drivers). Faça um programa em HTML/JS que:
+
+a) Tenha um campo para nome do passageiro;  
+b) Tenha um campo para a distância (em km) do local atual para o destino do passageiro;
+c) Tenha um campo - que só aceita número - que recebe a informação da bandeira da corrida (o valor deve ser apenas 1, 2 ou 3);
+c.1) Este campo só pode aceitar números e valores entre 1 e 3;
+d) Tenha um campo que recebe o horário da corrida (sistema de 24 horas e somente horas inteiras);
+d.1) Este campo só pode aceitar números e valores entre 0 e 23;
+e) Ao clicar em "Calcular corrida", informe ao passageiro o valor final da corrida, com uma frase assim:
+
+"Olá NOME Sua corrida, será na bandeira X, percorrerá Y km e o total da corrida será de Z"
+
+e.1) Siga a tabela abaixo para calcular o adicional por bandeira e horário:
+
+Obs: O valor nominal da corrida é de R$ 1,25 por km;
+
+Bandeira 1	
+0h - 6h	    5%
+7h - 12h	10%
+13h - 23h	15%
+Bandeira 2	
+0h - 6h	    10%
+7h - 12h	20%
+13h - 23h	30%
+Bandeira 3	
+0h - 6h	    15%
+7h - 12h	30%
+13h - 23h	45%
+
+Exemplos, para teste:
+
+Distância (km)	Bandeira	Horário	Total
+10	1	14	14,375
+20	2	15	32,5
+30	3	16	54,375
+40	1	17	57,5
+50	2	18	81,25
+60	3	19	108,75
+70	1	20	100,625
+80	2	21	130 -->

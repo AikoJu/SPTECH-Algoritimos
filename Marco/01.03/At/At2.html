@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 02</title>
+</head>
+<body>
+    
+    Quantas latinhas você toma por dia? <input 
+    id="inputLatinhas"> <br>
+
+    <button onclick="refri()">
+    Quantos refris?
+    </button>
+
+    <div id="divRefri"></div>
+</body>
+</html>
+<script>
+    function refri(){
+        var lata = Number(inputLatinhas.value)
+        var anual = lata * 365
+
+        if(anual > 500){
+            divRefri.innerHTML = `
+            Você toma ${anual} refrigerantes em um ano! <br>
+            Cuidado com a diabetes!`
+        }
+
+        if (anual < 500){
+            divRefri.innerHTML = `
+            Você toma ${anual} refrigerantes em um ano!`
+        }
+    }
+
+</script>
+<!-- 2. Amin Tiroso bebe com certa frequência e quer saber quanto consome de refrigerante em 1 ano. Para ajudá-lo a saber essa informação, crie um programa o qual:  
+
+a) Pergunte quantas latinhas de refrigerante toma por dia 
+
+b) Ao clicar num botão "Quantos refris?", calcule a quantidade de refrigerante que ele consome em 1 ano, considerando que 1 ano possui 365 dias 
+
+c) Exiba na página a quantidade de latinhas que ele consome por ano 
+
+d) Somente caso a quantidade for a partir de 500, exiba também a frase: "Cuidado com a diabetes!" -->

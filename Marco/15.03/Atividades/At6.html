@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 06</title>
+</head>
+<body>
+    Qual time grande São Paulo você torce ? <input type="text" id="inputTime"><br>
+    <button onclick="frase()">Fale sobre esse time </button><br>
+    <div id="divTime"></div>
+</body>
+</html>
+<script>
+    function frase(){
+        var time = inputTime.value
+
+        if(time == "Corinthians"){
+            divTime.innerHTML = `<span style="background-color:black ; color: white; font-size: xx-large;">Salve o Corinthians </span>`
+        } else if (time == "Palmeiras"){
+            divTime.innerHTML = `<span style="background-color: green ; color: white; font-size: xx-large;">Salve o alviverde imponente  </span>`
+        } else if (time == "Santos"){
+            divTime.innerHTML = `<span style="font-size: xx-large;"> Agora que dá a bola é o Santos </span>`
+        } else if (time == "São Paulo"){
+            divTime.innerHTML = `<span style="background-color:black ; color: red; font-size: xx-large;"> Salve o Tricolor paulista </span>`
+        }
+        }
+</script>
+<!-- 6. Crie um programa o qual: 
+a) Pergunte qual time grande São Paulo o usuário torce. 
+b) Ao clicar em "Fale sobre esse time", exiba abaixo: 
+   "Salve o Corinthians" com fundo preto e letra branca, se for Corinthians 
+   "Salve o alviverde imponente" com fundo verde e letra branca, se for Palmeiras 
+   "Agora que dá a bola é o Santos" com fundo branco e letra preta, se for Santos 
+   "Salve o Tricolor paulista" com fundo preto e letra vermelha, se for São Paulo  -->

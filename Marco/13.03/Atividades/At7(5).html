@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 07 (05)</title>
+</head>
+<body>
+    Quantidade de luz gasta no mês: <input type="text" id="inputGasto" placeholder="kWh"><br>
+    <button onclick="calculo()">
+    Calcular conta de luz
+    </button><br>
+</body>
+</html>
+<script>
+    function calculo(){
+        var valor = Number(inputGasto.value)
+        var total = valor * 0.85
+        
+        if(valor >= 100){
+        alert(`Você irá pagar R$${total}`)
+
+        
+        }else {
+            var total = total - (total * 0.1)
+            alert(`Você irá pagar R$${total}`)
+        }
+    }
+
+</script>
+<!-- 
+     7. Refazer os exercícios 5 e 10 da lista anterior usando a estrutura “if else”.
+    5. Na cidade Paulopolis a luz custa R$ 0,85 por kWh. Criar um programa que: 
+a) Solicite a quantidade de kWh consumida no mês 
+b) Ao clicar em "calcular conta de luz", calcule o valor da conta no mês 
+c) Dê um desconto de 10% somente se a quantidade for menor que 100 kWh 
+d) Exiba um alerta com o valor da conta a ser paga 
+
+OBS. Faça o teste de mesa para este exercício.  42,50 -->

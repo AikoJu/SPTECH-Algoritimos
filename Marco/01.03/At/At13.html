@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 13</title>
+</head>
+<body>
+    1º Nota: <input type="text" id="input1Nota"><br>
+    2º Nota: <input type="text" id="input2Nota"><br>
+    <button onclick="situacao()">
+        Verificar situação
+    </button>
+</body>
+</html>
+<script>
+    function situacao(){
+        var nota1 = Number(input1Nota.value)
+        var nota2 = Number(input2Nota.value)
+        var media = (nota1 + nota2) / 2
+        
+        if(media => 6 ) { 
+            alert(`Parabéns, aprovado(a)!`)
+        }
+        if(media < 6 ) {
+            alert(`Tente outra vez...`)
+        }
+        }
+</script>
+
+<!-- 
+13. Crie um programa o qual: 
+
+a) Solicite 2 notas de um aluno 
+
+b) Ao clicar em "Verificar situação", calcule sua média e... 
+
+c) Caso a média seja a partir de 6, exiba um alert com "Parabéns, aprovado!" 
+
+d) Caso a média seja menor que 6, exiba um alert com "Tente outra vez..."    -->

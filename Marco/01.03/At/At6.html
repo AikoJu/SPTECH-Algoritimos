@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 06</title>
+</head>
+<body>
+    Valor da renda: <input 
+    id="inputRenda"><br>
+
+    Valor da prestação: <input 
+    id="inputPrestacao"><br>
+   
+    <button onclick="calcular()">
+    Verificar financiamento
+    </button>
+    <div id="divFinanca"></div>
+</body>
+</html>
+
+<script>
+    function calcular(){
+        var renda = Number(inputRenda.value)
+        var prestacao= Number(inputPrestacao.value)
+        var financiamento = (prestacao/renda) * 100
+
+        divFinanca.innerHTML = `
+        A prestação corresponde a ${financiamento}% da renda familiar. <br> 
+        `
+        if(financiamento > 30){
+            divFinanca.innerHTML += `<b style = "color : red" >Será necessário complementar a renda familiar.</b>`        }
+    }
+</script>
+
+<!-- 6. Criar um programa que auxilie um banco a identificar quem tem renda o suficiente para fazer o financiamento da casa própria. 
+
+a) Solicite o valor da renda familiar 
+b) Solicite o valor da prestação 
+c) Ao clicar em "Verificar financiamento", exiba na página a mensagem "a prestação corresponde a xx.x% da renda familiar" 
+(divida a prestação pela renda e multiplique por 100) 
+d) Se o valor calculado acima for maior que 30%, exibir também a mensagem abaixo em negrito e em vermelho.  
+
+"Será necessário complementar a renda familiar" -->

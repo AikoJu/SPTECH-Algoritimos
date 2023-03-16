@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 02</title>
+</head>
+<body>
+    Digite o nome do Primeiro Candidato : <input  
+    id="input_nomeA"><br>
+
+    Quantidade de votos do primeiro: <input 
+    id="input_quantA"><br><br>
+
+    Digite o nome do Segundo Candidato : <input  
+    id="input_nomeB"><br>
+
+    Quantidade de votos do segundo: <input 
+    id="input_quantB"><br><br>
+
+    Votos brancos: <input 
+    id="input_brancos"><br><br>
+
+    Votos nulos: <input 
+    id="input_nulos"><br>
+
+    <button onclick="resultados()">Resultado da eleição</button>
+
+    <div id="div_eleicoes"></div>
+</body>
+</html>
+<script>
+    function resultados(){
+        var nomeA = input_nomeA.value;
+        var nomeB = input_nomeB.value;
+        var quantA = Number(input_quantA.value);
+        var quantB = Number(input_quantB.value);
+        var branco = Number(input_brancos.value)
+        var nulo = Number(input_nulos.value)
+        var total = quantA + quantB + branco + nulo;
+        var invalido = branco + nulo; 
+        var invalidopor = (invalido*100)/total;
+        var quantApor = (quantA*100)/total;
+        var quantBpor = (quantB*100)/total;
+        div_eleicoes.innerHTML = `
+        Total de votos: ${total} <br>
+        Candidato ${nomeA}: ${quantApor}% (${quantA}) <br>
+        Candidato ${nomeB}: ${quantBpor}% (${quantB}) <br>
+        Inválidos: ${invalidopor}% (${invalido})
+        `;
+    }
+</script>
+
+<!-- 2. Crie um programa em HTML/JS o qual:
+a) Solicite a quantidade de votos que o "Candidato A" teve na eleição;
+b) Solicite a quantidade de votos que o "Candidato B" teve na eleição;
+c) Solicite a quantidade de votos brancos que houveram na eleição;
+d) Solicite a quantidade de votos nulos que houveram na eleição;
+e) Ao clicar em "Resultado da Eleição", exibir textos  conforme o exemplo abaixo:
+
+    Total de votos: 200
+    Candidato A: 40% (80 votos)
+    Candidato B: 35% (70 votos)
+    Inválidos: 25% (50 votos)
+
+A quantidade de votos "Inválidos" é a soma de brancos e nulos - valores colhidos nos itens c) e d) -
+Não se preocupe em mostrar primeiro o "vencedor". Não temos como saber isso com o que aprendemos na programação até aqui ;) 
+Mostre os candidatos na ordem que quiser. -->

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 07</title>
+</head>
+<body>
+    Valor economizado: <input type="text" id="inputValor"><br>
+    <br>
+    <button onclick="analise()"> 
+    Poder de compra
+    </button><br>
+    <br>
+    <div id="divEconomia"></div>
+</body>
+</html>
+<script>
+    function analise(){
+        var valor = Number(inputValor.value)
+
+        if(valor <= 0){
+            divEconomia.innerHTML = `Nada de compras 😔`
+        } else if (valor <= 100){
+            divEconomia.innerHTML = `Viajem de ida e volta pra Praia Grande 🏖️<br>`
+        } else if (valor < 4000) {
+            divEconomia.innerHTML += `Uma boa moto usada 🏍️<br>`
+        } else {
+            divEconomia.innerHTML += `Mais uma bobagem legal 🤑<br>`
+        }
+    }
+</script>
+<!-- 7. Crie um programa o qual: 
+
+a) Solicite o valor que o usuário tem economizado 
+
+b) Ao clicar em "Poder de compra", exibir uma ou várias frases abaixo do dele, conforme estas regras: 
+
+   b.1) Caso o valor economizado seja igual ou menor que 0: Exibir SOMENTE a frase Nada de compras triste 
+
+   b.2) Caso o valor economizado for maior que 0 e até 100: Exibir Viajem de ida e volta pra Praia Grande 
+
+   b.3) Caso o valor economizado seja maior que 100 e menor que 4000: Exibir abaixo da frase de b.2): Uma boa moto usada 
+
+   b.4) Caso o valor economizado é a partir de 4000: Exibir abaixo da frase de b.3): Mais alguma bobagem legal  -->

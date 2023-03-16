@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 06 - #lovePizza </title>
+</head>
+<body>
+    Digite o valor da pizza: <input
+        id="input_valor">
+
+        <br>
+        <br>
+        
+    E digite em quantas pessoas o valor será dividido: <input 
+        id="input_pessoas">
+
+    <button onclick="calcular()">
+        #lovePizza
+        </button>
+</body>
+</html>
+
+<script>
+    function calcular(){
+        var pessoas = input_pessoas.value
+        var valor = input_valor.value
+        alert("Cada um dos " + pessoas + " amigos vai pagar R$" + (valor / pessoas))
+    }
+</script>
+
+<!-- 
+6. Todo mundo adora pizza! Existem para todos os gostos! Crie um programa que ajude o grupo de amigos "Equipe Lantra" a saber quanto uma pizza vai custar para cada amigo. 
+
+a) Solicite o valor da pizza e a quantidade de amigos que vão dividir o valor. 
+
+b) Ao clicar num botão "#lovePizza", exiba um alerta com a frase 
+
+     "Cada um dos X amigos vai pagar R$Y" 
+
+Onde X é a quantidade de amigos e Y é o resultado do cálculo que seu programa fará -->

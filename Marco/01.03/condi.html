@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exp</title>
+</head>
+<body>
+    Idade: <input 
+    id="inputIdade">
+
+    <button onclick="votacao()">
+    Verificar Idade
+    </button>
+
+    <div id="divResul"></div>
+</body>
+</html>
+
+<script>
+    function votacao(){
+        var idade = Number(inputIdade.value)
+
+        if (idade < 16){
+        divResul.innerHTML = "NÃO PODE!"
+        }
+
+        if (idade > 16){
+        divResul.innerHTML = "PODE! mas só se quiser"
+        }
+
+        if (idade > 18){
+        divResul.innerHTML = "DEVE!"
+        }
+    }
+
+</script>

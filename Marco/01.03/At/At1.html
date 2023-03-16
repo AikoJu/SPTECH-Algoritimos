@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01</title>
+</head>
+<body>
+    Digite sua idade: <input 
+    id="inputIdade">
+
+    <button onclick="verificacao()">
+    Ir pra festa
+    </button>
+
+</body>
+</html>
+<script>
+    function verificacao(){
+        var idade = Number(inputIdade.value)
+    
+        if(idade < 18){
+            alert ("Pedir permissão dos pais!")
+        }
+    
+            alert ("#partiuFesta")
+    }
+
+</script>
+<!-- 1. Crie um programa que: 
+
+a) Pergunte ao usuário sua idade. 
+
+b) Ao clicar num botão "Ir pra festa": 
+
+ b1) pode acontecer de aparecer um alert com a frase "Pedir permissão pro responsável" caso a idade for menor que 18 
+
+ b2) sempre vai aparecer um alert com a palavra "#partiuFesta" ao final -->

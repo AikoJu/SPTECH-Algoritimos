@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 08</title>
+</head>
+<body>
+    Digite a quantidade de homens: <input type="text" id="inputHomens"><br>
+    Digite a quantidade de mulheres: <input type="text" id="inputMulheres"><br>
+    <button onclick="analisar()">
+        Analisar peso
+    </button>
+    <div id="divPeso"></div>
+</body>
+</html>
+<script>
+    function analisar(){
+        var homem = Number(inputHomens.value)
+        var mulher = Number(inputMulheres.value)
+        var calchomem = homem * 80
+        var calcmulher = mulher * 60
+        var total = calchomem + calcmulher
+
+        divPeso.innerHTML = `Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${total}Kg.`
+    
+        if(total > 800){
+            divPeso.innerHTML += `<p style = "color: blue">Será necessário descer alguém para que o elevador se movimente.</p>`
+        }
+    }
+</script>
+
+
+<!-- 8. Crie um programa que controle o peso médio dentro de um elevador: 
+
+a) Solicite a quantidade de homens que entraram no elevador 
+b) Solicite a quantidade de mulher que entraram no elevador 
+c) Ao clicar em "Analisar peso", calcule o peso estimado sendo: homens x 80 somado com mulheres x 60 
+d) Exiba na página a mensagem "Este elevador suporta 800 Kg e o peso estimado desta lotação é de xxxkg"; 
+e) Se o peso estimado for maior que 800, exibir também a mensagem "Será necessário descer alguém para que o elevador se movimente", na cor azul.  -->

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10 - Calculadoura</title>
+</head>
+<body>
+    Digite o 1° número: <input 
+    id="input_prinumero">
+    <br>
+    Digite o 2° número: <input  
+    id="input_segnumero">
+    <br>
+    <br>
+    <button onclick="somar()">
+        Soma +
+    </button>
+
+    <button onclick="subtrair()">
+        Subtrair -
+    </button>
+    <br>
+    <button onclick="multiplicar()">
+        Multiplicar *
+    </button>
+    
+    <button onclick="dividir()">
+        Dividir /
+    </button>
+</body>
+</html>
+<script>
+  function somar(){
+        var prinumero = Number (input_prinumero.value)
+        var segnumero = Number (input_segnumero.value)
+        
+    alert("A soma entre " + prinumero + " e " + segnumero  + " é " + (prinumero + segnumero))
+    }
+
+    function subtrair(){
+        var prinumero = Number (input_prinumero.value)
+        var segnumero = Number (input_segnumero.value)
+        alert("A diferença entre " + prinumero + " e " + segnumero + " é " + (prinumero - segnumero))
+    }
+
+    function multiplicar(){
+        var prinumero = Number (input_prinumero.value)
+        var segnumero = Number (input_segnumero.value)
+        alert("O produto entre "+ prinumero + " e " + segnumero + " é " + (prinumero * segnumero))
+    }
+
+    function dividir(){
+        var prinumero = Number (input_prinumero.value)
+        var segnumero = Number (input_segnumero.value)
+        
+        alert("A razão entre " + prinumero +  " e " + segnumero + " é " + (prinumero / segnumero))
+    }  
+</script>
+    
+<!-- 
+10. Crie um programa que: 
+
+a) Solicite 2 números ao usuário 
+
+b) tenha um botão para cada operação aritmética. Ao clicar em algum deles, exibir ABAIXO do botão UMA dessas frases: 
+
+   - A soma entre X e Y é Z 
+
+   - A diferença entre X e Y é Z 
+
+   - O produto entre X e Y é Z 
+
+   - A razão entre X e Y é Z -->

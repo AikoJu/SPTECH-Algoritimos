@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 07</title>
+</head>
+<body>
+    Saldo da conta: <input type="text" id="inputSaldo"><br>
+    Valor do débito: <input type="text" id="inputDebito"><br>
+
+    <button onclick="analise()">
+        Analisar conta
+    </button><br>
+
+    <div id="divConta"></div>
+</body>
+</html>
+<script>
+    function analise(){
+        var conta = Number(inputSaldo.value)
+        var debito = Number(inputDebito.value)
+        var saldoAtual = conta - debito
+
+        divConta.innerHTML = `
+        O saldo atual da conta corrente é R$${saldoAtual}`
+        if (saldoAtual < 0){
+        divConta.innerHTML = `<b style = 'color : red'>O saldo atual da conta corrente é R$${saldoAtual}</b>`   
+        }
+    }
+</script>
+
+<!-- 7. Criar um programa que auxilie o Banco Itado a identificar quem entrou no cheque especial. 
+a) Solicite o saldo da conta 
+b) Solicite o valor do débito (ou seja, valor a tirar da conta) 
+c) Ao clicar em "Analisar conta", calcule o novo saldo da conta e exiba a mensagem "o saldo atual da conta corrente é xx.xx". 
+Esta frase deverá estar em negrito e em vermelho somente se o saldo for menor que zero.  -->
