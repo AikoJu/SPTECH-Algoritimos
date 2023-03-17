@@ -7,13 +7,30 @@
     <title>Atividade 09</title>
 </head>
 <body>
-    <input type="text" id=""><br>]
-    <button onclick="()"></button><br>
-    <div id=""></div>
+    Meta de economia: <input type="text" id="inputMeta"><br>
+    <br>
+    Quanto tem guardado: <input type="text" id="inputEconomia"><br>
+    <br>
+    <button onclick="analisar()">
+    Analisar economia
+    </button><br>
+    <div id="divEconomia"></div>
 </body>
 </html>
 <script>
-    function (){}
+    function analisar(){
+        var meta = Number(inputMeta.value)
+        var economia = Number(inputEconomia.value)
+        var diferenca = economia - meta
+        var falta = meta - economia
+
+        if (meta == economia){
+            divEconomia.innerHTML = `Parabéns, meta alcançada! <br>`
+        } else if (meta < economia){
+        divEconomia.innerHTML += `Meta ultrapassada em ${diferenca}`
+        } else {
+        divEconomia.innerHTML = `Força! Ainda em busca da meta! Falta ${falta}`}
+    }
 </script>
 <!-- 9. Crie um programa o qual: 
 
