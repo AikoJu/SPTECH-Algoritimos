@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 09</title>
+</head>
+<body>
+    Altura inicial: <input type="text" id="inputInicial"><br>
+    Altura Final: <input type="text" id="inputFinal"><br>
+    Nome: <input type="text" id="inputNome"><br>
+    Altura: <input type="text" id="inputAltura"><br>
+    <button onclick="analise()" >
+    Analisar
+    </button>
+    <div id="divCerto"></div>
+    <br><br>
+
+</body>
+</html>
+<script>
+    function analise(){
+        var inicial = Number(inputInicial.value)
+        var final = Number(inputFinal.value)
+        var nome = inputNome.value
+
+        if(inicial > 1 && inicial < final ){
+            divCerto.innerHTML = `
+            Nome: <input type="text" id="inputNome"><br>
+            
+            <br>
+            <button onclick="verificar()" >
+            Verificar
+            </button>
+            `
+        }else{
+            alert("VALOR(ES) INVÁLIDO(S)")
+        }
+    }
+</script>
+<!-- 09. Crie um programa o qual: 
+
+a) Pergunte o intervalo da altura desejada para os próximos pilotos (altura inicial e altura final de seleção) A altura inicial tem que ser maior que 1 e a altura final tem que ser maior que a altura inicial,
+ caso contrário emitir mensagem de alerta E NÃO SEGUIR EM FRENTE. 
+
+b) Pergunte o nome e a altura do candidato a piloto. 
+
+c) Emitir uma das duas mensagens abaixo sem apagar as mensagens anteriores: 
+
+1) “O candidato XXXXX com altura de 9,99 participará do processo de seleção de piloto”, caso a altura do candidato esteja no intervalo informado. 
+
+2) “Infelizmente o candidato XXXXX com altura de 9,99 não atende os requisitos”, caso a altura do candidato NÃO esteja no intervalo informado.  -->

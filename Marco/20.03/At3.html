@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 03</title>
+</head>
+<body>
+    Digite sua nota: <input type="text" id="inputNota">
+    <button onclick="avaliar()" >
+    Avaliar aluno
+    </button>
+</body>
+</html>
+<script>
+function avaliar(){
+    var nota = Number(inputNota.value)
+
+    if(nota >= 0 && nota <= 10){
+        alert("Nota válida!")
+    }else{
+        alert("Onde já se viu nota menor que 0 e maior que 10?!")
+    }
+}
+</script>
+<!-- 03. Crie um programa o qual: 
+
+a) Pergunte uma nota de um aluno 
+
+b) Ao clicar em "Avaliar aluno"... 
+
+c) Caso a nota for entre 0 e 10, exibir um alert com a frase "Nota válida!" 
+
+d) Caso a nota não estiver no intervalo definido em c), 
+exibir um alert com a frase "Onde já se viu nota menor que 0 e maior que 10?!"  -->

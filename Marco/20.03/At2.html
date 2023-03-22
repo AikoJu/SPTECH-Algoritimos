@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 02</title>
+</head>
+<body>
+
+    Digite sua renda: <input type="text" id="inputRenda">
+    <button onclick="calcular()" >
+    Verificar ajuda
+    </button>
+    
+</body>
+</html>
+<script>
+    function calcular(){
+        var renda = Number(inputRenda.value)
+
+        if(renda >= 1050 && renda <= 2100){
+            alert("Você terá direito!")
+        }else{
+            alert("Você NÃO terá direito!")
+        }
+    }
+</script>
+
+
+<!-- 02. Crie um programa que avaliará se uma pessoa tem direito à ajuda do governo na crise do Covid19: 
+
+a) Solicite renda do usuário 
+
+b) Solicite a renda total familiar do usuário 
+
+c) Ao clicar em "Verificar ajuda", exibe um alert com uma dessas mensagens 
+
+   "Você terá direito!", caso a renda do usuário for até 1050 e a renda familiar for até 2100. 
+   "Você NÃO terá direito", caso contrário  -->
