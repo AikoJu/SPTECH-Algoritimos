@@ -1,20 +1,45 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade </title>
+    <title>Atividade 10</title>
 </head>
 <body>
-    <input type="text" id="">
-    <button onclick="()" ></button>
-    
+    Digite sua idade: <input type="text" id="inputIdade">
+    <br><br>
+    Salário: <input type="text" id="inputSalario">
+    <br><br>
+    <button onclick="analisar()" >
+    Analisar situação
+    </button>
+    <br><br>
+    <div id="divSalario"></div>
+
 </body>
 </html>
 <script>
+    function analisar (){
+        var idade = Number(inputIdade.value)
+        var salario = Number(inputSalario.value)
 
-</script> -->
+        if(idade < 18 && salario < 2500){
+            divSalario.innerHTML = `Menor de idade e liso.`         
+        }else if(idade < 18 && salario >= 2500){
+            divSalario.innerHTML = `Menor de idade e ostentação.`         
+        }
+        if(idade >=  18 && salario < 3500){
+            divSalario.innerHTML = `Maior de idade e liso.`         
+        }    
+        else if(idade >= 18 && salario >= 3500 && salario <= 7000){
+            divSalario.innerHTML = `Maior de idade e ostentação.`         
+        }else if (idade >= 18 && salario > 7000){
+            divSalario.innerHTML = `Maior de idade e mega ostentação.`         
+        }
+
+    }
+</script>
 <!-- 10. Crie um programa o qual: 
 
 a) Solicite a idade e o salário do usuário 
@@ -29,4 +54,4 @@ e) Maior de idade e liso, caso a idade for a partir de 18 e o salário for menor
 
 f) Maior de idade e ostentação, caso a idade for a partir de 18 e o salário for a partir de 3500 até 7000. 
 
-<!-- g) Maior de idade e mega ostentação, caso a idade for a partir de 18 e o salário for maior que 7000.  --> -->
+g) Maior de idade e mega ostentação, caso a idade for a partir de 18 e o salário for maior que 7000.  --> 
