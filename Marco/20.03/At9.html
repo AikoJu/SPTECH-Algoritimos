@@ -7,10 +7,13 @@
     <title>Atividade 09</title>
 </head>
 <body>
-    Altura inicial: <input type="text" id="inputInicial"><br>
-    Altura Final: <input type="text" id="inputFinal"><br>
-    Nome: <input type="text" id="inputNome"><br>
-    Altura: <input type="text" id="inputAltura"><br>
+    Altura inicial: <input type="text" id="inputInicial">
+    <br><br>
+    Altura Final: <input type="text" id="inputFinal">
+    <br><br>
+    Nome: <input type="text" id="inputNome">
+    <br><br>
+    Altura: <input type="text" id="inputAltura">
     <button onclick="analise()" >
     Analisar
     </button>
@@ -24,16 +27,13 @@
         var inicial = Number(inputInicial.value)
         var final = Number(inputFinal.value)
         var nome = inputNome.value
-
+        var altura = Number(inputAltura.value)
         if(inicial > 1 && inicial < final ){
-            divCerto.innerHTML = `
-            Nome: <input type="text" id="inputNome"><br>
-            
-            <br>
-            <button onclick="verificar()" >
-            Verificar
-            </button>
-            `
+            if(altura > inicial && altura < final){
+                divCerto.innerHTML = `O candidato ${nome} com altura de ${altura} participará do processo de seleção de piloto.`
+            }else{
+                divCerto.innerHTML = `Infelizmente o candidato ${nome} com altura de ${altura} não atende os requisitos.`
+            }
         }else{
             alert("VALOR(ES) INVÁLIDO(S)")
         }
