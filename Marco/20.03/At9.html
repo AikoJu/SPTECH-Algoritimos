@@ -30,9 +30,9 @@
         var altura = Number(inputAltura.value)
         if(inicial > 1 && inicial < final ){
             if(altura > inicial && altura < final){
-                divCerto.innerHTML = `O candidato ${nome} com altura de ${altura} participará do processo de seleção de piloto.`
+                divCerto.innerHTML += `O candidato ${nome} com altura de ${altura} participará do processo de seleção de piloto.`
             }else{
-                divCerto.innerHTML = `Infelizmente o candidato ${nome} com altura de ${altura} não atende os requisitos.`
+                divCerto.innerHTML += `Infelizmente o candidato ${nome} com altura de ${altura} não atende os requisitos.`
             }
         }else{
             alert("VALOR(ES) INVÁLIDO(S)")

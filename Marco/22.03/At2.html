@@ -11,9 +11,21 @@
     <br>
     Digite sua nota do vestibular: <input type="text" id="inputNotaVest">
     <br>
-    <button onclick="notas()"></button>
+    <button onclick="notas()">Avaliação</button>
 </body>
 </html>
+<script>
+    function notas(){
+        var enem = Number(inputNotaEnem.value)
+        var vestibular = Number(inputNotaVest.value)
+
+        if(enem >= 800 || vestibular >= 700){
+            alert("Parabéns! Aprovado")
+        } else {
+            alert("Tente semestre que vem!")
+        }
+    }
+</script>
 <!-- 2. No processo seletivo da faculdade Mentes Brilhantes, o aluno é aprovado se sua nota no ENEM foi a partir de 800 ou se ele fizer o vestibular interno e tirar pelo menos 700. Crie um programa que será usado por essa instituição. 
 
 a) Solicite a nota do ENEM do aluno 
