@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Você já clicou <span id="numero"></span> vezes; 
+    <button onclick="aumentar()">
+        Aumentar em 1
+    </button>
+</body>
+</html>
+<script>
+    function aumentar(){
+        var clique = 0
+        clique += 1
+        numero.innerHTML = clique
+    }
+</script>
