@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01</title>
+</head>
+<body>
+    Login <br><input id="inputLogin">
+    <br><br>
+    Senha <br><input type="password" id="inputSenha"><br>
+    <button onclick = "verificacao()">
+        Entrar
+    </button>
+    <br><br>
+    <span id="spanMensagem"></span>
+</body>
+</html>
+<script>
+    var login = "aidimin"
+    var senha = "seinha"
+    
+    function verificacao(){
+        var inpLogin = inputLogin.value
+        var inpSenha = inputSenha.value
+        var verificacao = inpLogin == login && inpSenha == senha
+        
+
+        if(verificacao == true){
+            spanMensagem.innerHTML = `<h1 style="color:blue">Usuário autenticado com sucesso!</h1>`
+        }
+    }
+</script>
+<!-- 1.  Crie um programa o qual: 
+
+OBS: Use variáveis booleanas 
+
+a) Solicite o login e senha do usuário 
+
+b) Ao clicar num botão "Entrar", verifique as credenciais de acesso, sendo que... 
+
+c) Apenas o login "aidimin" com a senha "seinha" dão acesso ao sistema. Nesse caso, exiba uma frase em azul abaixo do botão dizendo "Usuário autenticado com sucesso!" 
+
+d) Caso o login e/ou a senha sejam inválidos, exiba uma dessas frases na cor vermelha abaixo do botão: 
+
+      "Seu login está inválido!", caso o login seja inválido. 
+      "Sua senha está inválida!", caso a senha seja inválida. 
+      Ambas as frases anteriores, uma ao lado ou abaixo da outra, caso tanto o login quanto a senha estejam erradas 
+
+e) Se somente a senha estiver errada, exiba um alert com a frase "Entre em contato com o suporte para recuperar sua senha" -->
