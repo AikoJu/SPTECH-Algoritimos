@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 02</title>
+</head>
+<body>
+    Digite seu salário: <input id="inputSalario">
+    <br><br>
+    <div id="divMensagem"></div>
+    <br><br>
+    <button onclick="confirmar()">Confirmar salário</button>
+    <button onclick="conta100()">Pagar conta de 100</button>
+    <button onclick="conta500()">Pagar conta de 500</button>
+    <button onclick="loteria()">Ganhar 2000 na loteria</button>
+</body>
+</html>
+<script>
+    var base = 0
+    function confirmar(){
+        salario = Number(inputSalario.value)
+        var atual = base += salario
+        divMensagem.innerHTML = `Grana atual: R$${atual}` 
+    }
+    function conta100(){
+        salario = Number(inputSalario.value)
+        var atual = base -= 100
+        divMensagem.innerHTML = `Grana atual: R$${atual}`
+    }
+    function conta500(){
+        salario = Number(inputSalario.value)
+        var atual = base -= 500
+        divMensagem.innerHTML = `Grana atual: R$${atual}`
+    }
+    function loteria(){
+        salario = Number(inputSalario.value)
+        var atual = base += 2000
+        divMensagem.innerHTML = `Grana atual: R$${atual}`
+    }
+</script>
+
+<!-- 2) (ENTREGAR) Crie um programa em HTML/JS o qual:
+a) Pergunte qual o salário do usuário
+b) Tenha um botão "Confirmar salário". Ao ser clicado, ele deixe aparecendo na tela uma frase assim "Grana atual: R$X"
+c) Tenha um botão "Pagar conta de 100", que, ao ser clicado, ele reduza a "Grana atual" em 100 e atualize essa informação na tela
+d) Tenha um botão "Pagar conta de 500", que, ao ser clicado, ele reduza a "Grana atual" em 500 e atualize essa informação na tela
+e) Tenha um botão "Ganhar 2000 na loteria", que, ao ser clicado, ele aumente a "Grana atual" em 2000 e atualize essa informação na tela -->

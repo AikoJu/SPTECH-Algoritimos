@@ -1,0 +1,95 @@
+ 2.  Crie um programa o qual: 
+
+OBS: Use variáveis booleanas 
+
+a) Solicite a altura do usuário 
+
+b) Ao clicar em "Analisar para esportes", exiba, abaixo do botão, uma ou mais dessas frases (uma abaixo da outra caso aparecam mais de uma): 
+
+     "Pode tentar ser piloto(a) de corrida", caso sua altura for menor que 1,60 
+     "Pode tentar ser velejador(a)", caso sua altura for menor que 1,60 
+     "Pode tentar ser jogador de futebol ou handbol", caso sua altura for mais que 1,60 e até 1,85 
+
+ 
+
+3. Crie um programa o qual: 
+
+OBS: Use variáveis booleanas 
+
+a) Solicite a nota e a frequência do aluno 
+
+b) Ao clicar em "Avaliar", exiba algumas dessas frases abaixo do botão (pode ser que mais de uma delas apareça. Nesse caso, mostre uma abaixo da outra): 
+
+    "Parabéns, aprovado(a)!" caso sua nota for a partir de 6 e sua frequência a partir de 75 
+    "Reprovado(a) por nota!" caso sua nota for menor que  6 
+    "Reprovado(a) por frequência!" caso sua frequência for menor que 75 
+
+ 
+
+4. Crie um programa o qual: 
+
+OBS: Use variáveis booleanas 
+
+a) Receba a idade da pessoa e informe os estágios pelo qual essa pessoa já passou da seguinte forma: 
+
+    Já passou pela infância: true/false 
+
+    Já passou pela adolescência: true/false 
+
+    Já é um idoso: true/false 
+
+    TOTAL DE PONTOS: 99 
+
+b) Sendo que:  
+
+    A infância é até os 12 anos; 
+
+    A adolescência até os 18 anos; 
+
+    O idoso é a partir dos 65 anos;  
+
+c) Para a pontuação, use:  
+
+    Se já passou pela infância, ganha 10 pontos; 
+
+    Se já passou pela adolescência, ganha 20 pontos; 
+
+    Se já é um idoso, ganha 50 pontos; 
+
+ 
+
+5. Crie um programa o qual: 
+
+OBS: Use variáveis booleanas 
+
+a) Solicite o peso e a altura do usuário; 
+
+b) Ao clicar em “Verificar IMC”, faça:  
+
+    b1) Caso os campos estejam vazios, emita um alerta solicitando as entradas e encerre; 
+
+    b2) Caso todos os campos estejam preenchidos, prossiga; 
+
+c) Valide se a altura está em centímetros ou metros, onde:  
+
+    c1) Caso a altura esteja em centímetros, converta-a para metros e prossiga; 
+
+    c2) Caso a altura já esteja em metros, prossiga; 
+
+d) Calcule o IMC do usuário e exiba na tela uma frase de acordo com o sse de acordo com o seu IMC:  
+
+    "Abaixo do Peso" em azul, caso esteja com IMC menor que 18.5; 
+
+    "Peso Ideal" em verde, caso esteja com IMC entre 18.5 e 24.9; 
+
+    "Excesso de Peso" em amarelo, caso IMC seja maior que 24.9 e até 30; 
+
+    "Obesidade" em laranja, caso IMC seja maior que 30 e até 35; 
+
+    "Obesidade Extrema" em vermelho, caso o IMC seja maior que 35; 
+
+OBS2: A fórmula para calcular o IMC é “peso / (altura * altura)”, como: 
+
+    IMC = 70 / (1.75 * 1.75)     ->     resulta em: 22.8571428571 
+
+OBS3: Para converter centímetros em metros, divida os centímetros por 100.
