@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 03</title>
+</head>
+<body>
+    <div style="color: blue;">
+    Total guardado no cofrinho: R$<span id="spanAtual">0</span>
+    <br>
+    Depósitos efetuados: <span id="spanDeposito">0</span>
+    <br>
+    Retiradas efetuadas: <span id="spanRetirar">0</span>
+    <br>
+    </div>
+    <button onclick="deposito050()">Depositar 0,50</button>
+    <button onclick="deposito2()">Depositar 2,00</button>
+    <button onclick="retirar050()">Retirar 0,50</button>
+    <button onclick="retirar()">Retirar</button>
+    
+</body>
+</html>
+<script>
+    var base = 0
+    var baseDeposito = 0
+    var baseRetirada = 0
+    function deposito050(){
+        var deposito50 = base += 0.5
+        var depositoTotal = baseDeposito += 1
+        spanAtual.innerHTML = deposito50
+        spanDeposito.innerHTML = depositoTotal
+    }
+    function deposito2(){
+        var deposito2 = base += 2
+        var depositoTotal = baseDeposito += 1
+        spanAtual.innerHTML = deposito2
+        spanDeposito.innerHTML = depositoTotal
+    }
+    function retirar050(){
+        var retirar50 = base -= 0.5
+        var retirarTotal = baseRetirada += 1
+        spanAtual.innerHTML = retirar50
+        spanRetirar.innerHTML = retirarTotal
+    }
+    function retirar(){
+        var retirar = base -= base
+        var retirarTotal = baseRetirada += 1
+        spanAtual.innerHTML = retirar
+        spanRetirar.innerHTML = retirarTotal
+    }
+</script>
+<!-- 3) (ENTREGAR) Tio Patinhas está ensinando seus netos a guardar dinheiro; Ajude-o criando um programa em HTML/JS o qual:
+a) Exiba na tela, logo de início, na cor azul:
+Total guardado no cofrinho: R$0
+Depósitos efetuados: 0
+Retiradas efetuadas: 0
+
+b) Ao clicar num botão "Depositar 0,50", o valor depositado aumente em R$0,50 e a quantidade de depósitos aumente em 1. Atualize essas informações na tela;
+c) Ao clicar num botão "Depositar 2,00", o valor depositado aumente em R$2,00 e a quantidade de depósitos aumente em 1. Atualize essas informações na tela;
+d) Ao clicar num botão "Retirar 0,50" o valor depositado é diminuído em R$0,50 e a quantidade de retiradas aumenta em 1. Atualize essas informações na tela;
+e) Ao clicar num botão "Retirar" o valor depositado é diminuído de acordo com o campo "Valor", disponível na tela. -->
