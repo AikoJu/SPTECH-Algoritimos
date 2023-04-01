@@ -1,17 +1,3 @@
- 2.  Crie um programa o qual: 
-
-OBS: Use variáveis booleanas 
-
-a) Solicite a altura do usuário 
-
-b) Ao clicar em "Analisar para esportes", exiba, abaixo do botão, uma ou mais dessas frases (uma abaixo da outra caso aparecam mais de uma): 
-
-     "Pode tentar ser piloto(a) de corrida", caso sua altura for menor que 1,60 
-     "Pode tentar ser velejador(a)", caso sua altura for menor que 1,60 
-     "Pode tentar ser jogador de futebol ou handbol", caso sua altura for mais que 1,60 e até 1,85 
-
- 
-
 3. Crie um programa o qual: 
 
 OBS: Use variáveis booleanas 
@@ -93,3 +79,4 @@ OBS2: A fórmula para calcular o IMC é “peso / (altura * altura)”, como:
     IMC = 70 / (1.75 * 1.75)     ->     resulta em: 22.8571428571 
 
 OBS3: Para converter centímetros em metros, divida os centímetros por 100.
+

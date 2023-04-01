@@ -9,9 +9,25 @@
 <body>
     <button onclick="esquerda()">Mover p/ Esquerda</button> 
     <button onclick="direita()">Mover p/ Direita</button> Quantos pixels: <input id="inputPixels">
-    <img id="imgBart"  src="">
+    <br><br>
+    <img id="imgBart" style="margin-left: 0px;"  width="200px" src="https://www.purarteadesivos.com.br/wp-content/uploads/2017/05/Bart-simpson-skate.png">
 </body>
 </html>
+<script>
+    var margem = imgBart.style.marginLeft = 0
+
+    function esquerda() {
+        var pixel = Number(inputPixels.value)
+        
+        imgBart.style.marginLeft -= pixel
+
+    }
+    function direita() {
+        var pixel = Number(inputPixels.value)
+
+        imgBart.style.marginLeft += pixel 
+    }
+</script>
 <!-- 4) (DESAFIO) Crie um programa em HTML/JS o qual:
 a) Tenha, no topo da página os botões "Mover p/ Esquerda" e "Mover p/ Direita", lado a lado
 b) Ao lado dos botões, uma caixa de entrada de texto com a indicação "Quantos pixels"
