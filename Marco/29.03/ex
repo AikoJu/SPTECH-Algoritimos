@@ -1,18 +1,4 @@
-3. Crie um programa o qual: 
-
-OBS: Use variáveis booleanas 
-
-a) Solicite a nota e a frequência do aluno 
-
-b) Ao clicar em "Avaliar", exiba algumas dessas frases abaixo do botão (pode ser que mais de uma delas apareça. Nesse caso, mostre uma abaixo da outra): 
-
-    "Parabéns, aprovado(a)!" caso sua nota for a partir de 6 e sua frequência a partir de 75 
-    "Reprovado(a) por nota!" caso sua nota for menor que  6 
-    "Reprovado(a) por frequência!" caso sua frequência for menor que 75 
-
- 
-
-4. Crie um programa o qual: 
+<!-- 4. Crie um programa o qual: 
 
 OBS: Use variáveis booleanas 
 
@@ -40,11 +26,11 @@ c) Para a pontuação, use:
 
     Se já passou pela adolescência, ganha 20 pontos; 
 
-    Se já é um idoso, ganha 50 pontos; 
+    Se já é um idoso, ganha 50 pontos;  -->
 
  
 
-5. Crie um programa o qual: 
+<!-- 5. Crie um programa o qual: 
 
 OBS: Use variáveis booleanas 
 
@@ -78,5 +64,5 @@ OBS2: A fórmula para calcular o IMC é “peso / (altura * altura)”, como:
 
     IMC = 70 / (1.75 * 1.75)     ->     resulta em: 22.8571428571 
 
-OBS3: Para converter centímetros em metros, divida os centímetros por 100.
+OBS3: Para converter centímetros em metros, divida os centímetros por 100. -->
 

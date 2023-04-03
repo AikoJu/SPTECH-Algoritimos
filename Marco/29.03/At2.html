@@ -8,10 +8,34 @@
 </head>
 <body>
     Digite sua altura: <input id="inputAltura">
-    
+    <br>
+    <button onclick="analise()">
+      Analisar para esportes
+    </button>
+    <br>
+    <div id="divMensagem"></div>
+
 </body>
 </html>
+<script>
+  function analise(){
+    var altura = Number(inputAltura.value)
+    altura = altura/100
+    var min = altura < 1.60
+    var max = altura > min && altura < 1.85
+  
+    if(min = true){
+      divMensagem.innerHTML = `Pode tentar ser piloto(a) de corrida`
+    } 
+    if(med = true){
+        divMensagem.innerHTML += `Pode tentar ser velejador(a)`
+    }else{
+      divMensagem.innerHTML = `Pode tentar ser jogador de futebol ou handbol`
+    }
 
+  }
+
+</script>
 <!-- 2.  Crie um programa o qual: 
 
 OBS: Use variáveis booleanas 
