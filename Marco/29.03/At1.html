@@ -5,16 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 01</title>
+    <style> .form {  margin: 100px; padding: 30px;
+        border-radius: 8px; width: fit-content; background-color: #63B1BC; display: flex; flex-direction: column; align-content: center; justify-content: center;} 
+        button{border-radius: 5px;}</style>
 </head>
 <body>
+    <center>
+    <div class="form">
     Login <br><input id="inputLogin">
-    <br><br>
     Senha <br><input type="password" id="inputSenha"><br>
     <button onclick = "verificacao()">
         Entrar
     </button>
-    <br><br>
+</div>
     <span id="spanMensagem"></span>
+    </center>
 </body>
 </html>
 <script>

@@ -5,31 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 02</title>
+    <style> .form {  margin: 100px; padding: 30px;
+      border-radius: 8px; width: fit-content; background-color: #63B1BC; display: flex; flex-direction: column; align-content: center; justify-content: center;} 
+      button{border-radius: 5px;}</style>
 </head>
 <body>
+  <center>
+  <div class="form">
     Digite sua altura: <input id="inputAltura">
     <br>
     <button onclick="analise()">
       Analisar para esportes
     </button>
+  </div>
     <br>
     <div id="divMensagem"></div>
-
+  </center>
 </body>
 </html>
 <script>
   function analise(){
     var altura = Number(inputAltura.value)
-    altura = altura/100
     var min = altura < 1.60
-    var max = altura > min && altura < 1.85
+    var max = altura > min && altura <= 1.85
   
-    if(min = true){
-      divMensagem.innerHTML = `Pode tentar ser piloto(a) de corrida`
-    } 
-    if(med = true){
-        divMensagem.innerHTML += `Pode tentar ser velejador(a)`
-    }else{
+    if(min == true){
+      divMensagem.innerHTML = `Pode tentar ser piloto(a) de corrida <br>`
+      divMensagem.innerHTML += `Pode tentar ser velejador(a)`
+    }
+    else if(max == true){
       divMensagem.innerHTML = `Pode tentar ser jogador de futebol ou handbol`
     }
 

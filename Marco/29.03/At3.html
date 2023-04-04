@@ -35,14 +35,17 @@
             divMensagem.innerHTML = `<h1>Parabéns, aprovado(a)!</h1>`
         }
 
-        else if(reprovadoFrequencia == true){
-            divMensagem.innerHTML += `<h1>Reprovado(a) por frequência!</h1>`
+        if(reprovadoFrequencia == true ){
+            divMensagem.innerHTML = `<h1>Reprovado(a) por frequência!</h1>`
             if(reprovadoNota == true){
                 divMensagem.innerHTML += `<h1>Reprovado(a) por nota!</h1>`    
             }
         }
-        else if(reprovadoNota == true){
-            divMensagem.innerHTML += `<h1>Reprovado(a) por nota!</h1>`
+        if(reprovadoNota == true){
+            divMensagem.innerHTML = `<h1>Reprovado(a) por nota!</h1>`
+            if(reprovadoFrequencia == true){
+                divMensagem.innerHTML += `<h1>Reprovado(a) por frequência!</h1>`    
+            }
         }
     }
 </script>
