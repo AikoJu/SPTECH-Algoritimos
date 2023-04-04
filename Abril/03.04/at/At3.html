@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 03</title>
+</head>
+<body>
+   <Button onclick="frase()">
+        Boa tarde?
+   </Button>
+   <div id="divMensagem"></div> 
+</body>
+</html>
+<script>
+    function frase(){
+        vezes = 0 
+        while(vezes <= 7){
+            divMensagem.innerHTML += `Boa tarde <br>`
+            vezes += 1
+        }
+    }
+</script>
+<!-- 3. Refaça o programa anterior de tal forma que, antes de cada frase apareça um contador. Ex: Se a frase digitada foi “Boa Tarde” a página ficará assim: 
+1. Boa tarde 
+2. Boa tarde 
+    ... 
+7. Boa tarde -->

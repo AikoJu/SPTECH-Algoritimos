@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style> .form {  margin: 100px; padding: 30px;
         border-radius: 8px; width: fit-content; background-color: #63B1BC; display: flex; flex-direction: column; align-content: center; justify-content: center;} 
-        button{border: none; border-radius: 5px;}</style>
+        button{border-radius: 5px;}</style>
     <title>Atividade 03</title>
 </head>
 <body>
+    <center>
     <div class="form">
     Digite sua nota: <input id="inputNota">
     Digite sua frequência: <input id="inputFrequencia">
@@ -19,29 +20,30 @@
     </button>
     </div>
     <div id="divMensagem"></div>
+</center>
 </body>
 </html>
 <script>
-    var aprovado 
     function avaliar(){
         var nota = Number(inputNota.value)
         var frequencia = Number(inputFrequencia.value)
         var aprovado = nota >= 6 && frequencia >= 75
         var reprovadoNota = nota < 6
         var reprovadoFrequencia = frequencia < 75
-
-        if (aprovado = true){
-
-            divMensagem.innerHTML = `Parabéns, aprovado(a)!`
-        }
-        else if(reprovadoNota = true ){
-            divMensagem.innerHTML = `Reprovado(a) por nota!` 
         
-            if(reprovadoFrequencia = true){
-            divMensagem.innerHTML += `Reprovado(a) por frequência!`
+        if(aprovado == true){
+            divMensagem.innerHTML = `<h1>Parabéns, aprovado(a)!</h1>`
         }
+
+        else if(reprovadoFrequencia == true){
+            divMensagem.innerHTML += `<h1>Reprovado(a) por frequência!</h1>`
+            if(reprovadoNota == true){
+                divMensagem.innerHTML += `<h1>Reprovado(a) por nota!</h1>`    
+            }
         }
-        
+        else if(reprovadoNota == true){
+            divMensagem.innerHTML += `<h1>Reprovado(a) por nota!</h1>`
+        }
     }
 </script>
 <!-- 3. Crie um programa o qual: 
