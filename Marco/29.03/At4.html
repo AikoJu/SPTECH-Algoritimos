@@ -25,8 +25,32 @@
 <script>
     function avaliar(){
         var idade = Number(inputIdade.value)
+        var infancia = idade > 12 
+        var adolescencia = idade > 18 
+        var idoso = idade >= 65 
+        var soma = 0
+
+        if(idoso == true){
+            var soma = 50+20+10    
+        } 
+        if(adolescencia == true){
+           var soma = 10 + 20
+        }
+        if(infancia == true){
+            var soma = 10
+        }
+
+        divMensagem.innerHTML = `Já passou pela infância: ${infancia} 
+        <br><br>
+        Já passou pela adolescência: ${adolescencia} 
+        <br><br>
+        Já é um idoso: ${idoso}
+        <br><br>
+        TOTAL DE PONTOS:${soma}
+        `
+
         
-        
+
     }
 </script>
 <!-- 4. Crie um programa o qual: 
