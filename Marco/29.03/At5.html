@@ -32,10 +32,7 @@
        
         
 
-        if(peso == "" || altura == ""){
-            alert("Preencha todos os campos!")
-        }
-        else { 
+        if(peso != "" || altura != ""){ 
 
             if(centimetros < 0){
                 altura = altura/100
@@ -74,6 +71,8 @@
                 divMensagem.innerHTML = `<h2 style= "color: red"> Obesidade Extrema</h2>`
                 }
             }
+        }else{
+            alert("Preencha todos os campos!")
         }
        
     }
