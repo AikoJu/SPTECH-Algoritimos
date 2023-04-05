@@ -4,12 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> .form {  margin: 100px; padding: 30px;
+        border-radius: 8px; width: fit-content; background-color:  #63B1BC; display: flex; flex-direction: column; align-content: center; justify-content: center;} 
+        button{border-radius: 5px;}</style>
     <title>Atividade 05</title>
 </head>
 <body>
-    
+    <center>
+    <div class="form">
+        Digite seu peso: <input id="inputPeso">
+        <br>
+        Digite sua altura: <input id="inputAltura">
+        <br>
+        <Button onclick="calculo()">
+        Verificar IMC
+        </Button>
+    </div>
+    <div id="divMensagem"></div>
+</center>
 </body>
 </html>
+<script>
+    function calculo(){
+        var peso = Number(inputPeso.value)
+        var altura = Number(inputAltura.value) 
+        var centimetros = inputAltura.value.indexOf(".")
+       
+        
+
+        if(peso == "" || altura == ""){
+            alert("Preencha todos os campos!")
+        }
+        else { 
+
+            if(centimetros < 0){
+                altura = altura/100
+                var imc = peso/(altura*altura)
+                if(imc < 18.5){
+                divMensagem.innerHTML = `<h2 style= "color: blue">Abaixo do peso</h2>`
+                }
+                else if(imc >= 18.5 && imc <= 24.9){
+                divMensagem.innerHTML = `<h2 style= "color: green">Peso ideal</h2>`
+                }
+                else if(imc > 24.9 && imc <=30){
+                divMensagem.innerHTML = `<h2 style= "color: yellow">Excesso de Peso </h2>`
+                }
+                else if(imc > 30 && imc <= 35){
+                divMensagem.innerHTML = `<h2 style = "color: orange">Obesidade</h2>` 
+                }
+                else {
+                divMensagem.innerHTML = `<h2 style= "color: red"> Obesidade Extrema</h2>`
+                }
+            }
+            else{
+                var imc = peso/(altura*altura)
+                if(imc < 18.5){
+                divMensagem.innerHTML = `<h2 style= "color: blue">Abaixo do peso</h2>`
+                }
+                else if(imc >= 18.5 && imc <= 24.9){
+                divMensagem.innerHTML = `<h2 style= "color: green">Peso ideal</h2>`
+                }
+                else if(imc > 24.9 && imc <=30){
+                divMensagem.innerHTML = `<h2 style= "color: yellow">Excesso de Peso </h2>`
+                }
+                else if(imc > 30 && imc <= 35){
+                divMensagem.innerHTML = `<h2 style= "color: orange"> Obesidade </h2>` 
+                }
+                else {
+                divMensagem.innerHTML = `<h2 style= "color: red"> Obesidade Extrema</h2>`
+                }
+            }
+        }
+       
+    }
+</script>
+
+
 <!-- 5. Crie um programa o qual: 
 
 OBS: Use variáveis booleanas 

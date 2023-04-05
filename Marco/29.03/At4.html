@@ -30,15 +30,16 @@
         var idoso = idade >= 65 
         var soma = 0
 
-        if(idoso == true){
-            var soma = 50+20+10    
-        } 
-        if(adolescencia == true){
-           var soma = 10 + 20
-        }
+        
         if(infancia == true){
             var soma = 10
         }
+        if(adolescencia == true){
+           var soma = 10 + 20
+        }
+        if(idoso == true){
+            var soma = 50+20+10    
+        } 
 
         divMensagem.innerHTML = `Já passou pela infância: ${infancia} 
         <br><br>

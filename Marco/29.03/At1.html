@@ -30,11 +30,25 @@
         var inpLogin = inputLogin.value
         var inpSenha = inputSenha.value
         var verificacao = inpLogin == login && inpSenha == senha
+        var loginErrado = inpLogin !=login && inpSenha == senha
+        var senhaErrado = inpLogin == login && inpSenha != senha
         
 
         if(verificacao == true){
             spanMensagem.innerHTML = `<h1 style="color:blue">Usuário autenticado com sucesso!</h1>`
         }
+        if(loginErrado == true){
+            spanMensagem.innerHTML = `<h1 style="color:red">Seu login está inválido!</h1>`
+        }
+        if(senhaErrado == true){
+            spanMensagem.innerHTML = `<h1 style="color:red">Sua senha está inválida! <br>
+                Entre em contato com o suporte para recuperar sua senha</h1>`
+        }if (loginErrado == true && senhaErrado == true){
+            spanMensagem.innerHTML = `<h1 style="color:red">Seu login está inválido!<br>
+                Sua senha está inválida!<br>
+                Entre em contato com o suporte para recuperar sua senha</h1>`
+        }
+        
     }
 </script>
 <!-- 1.  Crie um programa o qual: 
