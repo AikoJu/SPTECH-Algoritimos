@@ -5,19 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 03</title>
+    <style> .form {  margin: 100px; padding: 30px;
+        border-radius: 8px; width: fit-content; background-color: #63B1BC; display: flex; flex-direction: column;} 
+        button{border-radius: 5px;}
+        div{align-self: center;}
+        </style>
 </head>
 <body>
-   <Button onclick="frase()">
-        Boa tarde?
-   </Button>
+    <div>
+        <div class="form">
+            Digite a frase: <input id="inputFrase">
+        <Button onclick="frase()">
+        Mensagem
+        </Button>
+    </div>
    <div id="divMensagem"></div> 
+    </div>
 </body>
 </html>
 <script>
     function frase(){
+        var frase = inputFrase.value
         vezes = 0 
         while(vezes <= 7){
-            divMensagem.innerHTML += `Boa tarde <br>`
+            divMensagem.innerHTML += `${frase}<br>`
             vezes += 1
         }
     }
