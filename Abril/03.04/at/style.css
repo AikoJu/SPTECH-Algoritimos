@@ -1,6 +1,5 @@
 body {background-color: rgb(186, 240, 240);} 
-.container{ display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 100px;} 
-    
+.container{ display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 100px;}  
 .form{font-family:sans-serif ; font-size: larger; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #63b1bc ; border-radius: 8px;} 
 #par{color: blue;} 
 #impar{color: red;}

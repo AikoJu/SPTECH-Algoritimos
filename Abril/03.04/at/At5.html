@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 05</title>
     <style> 
-        .container{display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 100px;} .form{padding: 20px; background-color: #63b1bc ; border-radius: 8px;} 
-        </style>
+        body {background-color: rgb(186, 240, 240);} 
+        .container{ display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 100px;}  
+        .form{font-family:sans-serif ; font-size: larger; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #63b1bc ; border-radius: 8px;}         
+    </style>
 </head>
 <body>
     <div class="container">
@@ -15,19 +17,20 @@
             <button onclick="contar()">
             Números cabalísticos
             </button>
+            <div id="divNumeros"></div>
         </div>
-        <div id="divNumeros"></div>
     </div>    
 </body>
 </html>
 <script>
     function contar(){
         var valor = 1
+        var num3 = 3
+        divNumeros.innerHTML = ``
         while(valor <= 30){
-            
-                if(valor == 3){
-                    divNumeros.innerHTML = ` <br>`
-                    }   
+            if(valor != 3 && valor != 4 && valor != 7 && valor != 10 && valor != 12){
+                divNumeros.innerHTML += `${valor} <br>`
+            }
                 valor ++    
         }
     }
