@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 12 </title>
+    <!-- <style> body {background-color: rgb(186, 240, 240);} .container{ display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 100px;} 
+    .form{font-family:'Calibri'; font-size: larger; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #63b1bc ; border-radius: 8px;} #par{color: blue;} #impar{color: red;}
+    </style> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="container">
+          <div class="form">
+          <h2> Tabuada </h2>
+          Qual tabuada quer ver? <input id="inputTabuada" placeholder="2 á 9"><br>
+          Até que número? <input id="inputNum"><br>
+          <button onclick="tabuada()">
+               Ver tabuada
+          </button>
+          <div id="divTabuada"></div>
+          </div>
+     </div>
+    
+</body>
+</html>
+<script>
+     function tabuada (){
+          var tabuada = Number(inputTabuada.value)
+          var max = Number(inputNum.value)
+          var base = 1
+          
+          divTabuada.innerHTML = "" 
+          while(base <= max){
+               var resultado = tabuada * base
+               if(resultado % 2 == 0){
+               divTabuada.innerHTML += `<p id="par">${tabuada} x ${base} = ${resultado}</p>`
+               }
+               if(resultado % 2 != 0){
+                    divTabuada.innerHTML += `<p id="impar">${tabuada} x ${base} = ${resultado}</p>`     
+               }
+          base ++
+          }
+     }
+</script>
+<!-- (ENTREGAR) 12. Crie um programa o qual: 
+
+a) Pergunte, numa combo, qual a tabuada que o usuário quer ver na tela (2 a 9);
+
+b) Pergunte até que número a tabuada deve ser construída;
+
+c) Ao clicar no botão “Ver Tabuada”, exiba abaixo a tabuada como neste exemplo (considerando que o usuário escolheu a tabuada do 3 e para ir até o 12).
+
+         3 x 1 = 3 
+
+         3 x 2 = 6 
+
+         3 x 3 = 9 
+
+         3 x 4 = 12 
+
+         3 x 5 = 15 
+
+         3 x 6 = 18 
+
+         3 x 7 = 21 
+
+         3 x 8 = 24 
+
+         3 x 9 = 27 
+
+         3 x 10 = 30 
+
+         3 x 11 = 33 
+
+         3 x 12 = 36 
+
+d) Observar que quando o multiplicador for ímpar, a linha apareça na cor vermelha e quando for par, na cor azul. ex: "3 x 1 = 3" aparecer tudo em vermelho, mas "3 x 4 = 12" aparece tudo em azul.  -->

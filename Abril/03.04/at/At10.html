@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <h1>Defina um intervalo </h1>
+            Nº minímo: <input id="inputMinimo">
+            Nº máximo: <input id="inputMaximo">
+            <button onclick="pares()">
+                S2 pares
+            </button>
+        <div id="divPares"></div>
+        </div>
+    </div>    
+</body>
+</html>
+<script>
+    function pares(){
+        var min = Number(inputMinimo.value)
+        var max = Number(inputMaximo.value)
+        
+        while(min <= max){
+            if(min%2==0){
+                divPares.innerHTML += `${min} <br>`
+        }
+        min ++}
+    }
+</script>
+<!-- (ENTREGAR) 10. Crie um programa o qual: 
+
+a) Solicite um intervalo crescente de valores numéricos  
+
+b) Ao clicar num botão "S2 Pares"... 
+
+c) Exiba, debaixo do botão, todos os números pares contidos no intervalo. -->

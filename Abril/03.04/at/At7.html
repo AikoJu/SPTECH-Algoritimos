@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 07</title>
+    <style>.container{display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 100px;} 
+        .form{padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #63b1bc ; border-radius: 8px;}</style> 
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            Digite um número: <input id="inputNumero" placeholder="até 100"><br>
+            <button onclick="contar()">
+                Adoro múltiplos de 5
+            </button>
+            <div id="divMensagem"></div>
+        </div>
+        
+    </div>
+</body>
+</html>
+<script>
+    function contar(){
+    divMensagem.innerHTML = ""
+    var valorInformado = Number(inputNumero.value)
+    var valor = 0
+    
+    if(valorInformado <= 100){
+        while(valor <= valorInformado){
+        if(valor % 5 == 0){
+            divMensagem.innerHTML += "<br>" + valor 
+        }
+        valor ++
+        }
+    }else{
+        alert("VALOR INVÁLIDO!")
+    }
+}
+</script>
+
+<!-- (ENTREGAR) 7. Crie um programa o qual: 
+
+a) Receba do usuário um número (tem que ser entre 20 e 100) 
+
+b) Ao clicar num botão "Adoro múltiplos de 5"... 
+
+b) Exiba, debaixo do botão, todos os múltiplos de 5 entre de 0 e o número informado em a), um embaixo do outro. Ex: 5, 10, 15, 20... 
+
+OBS: ATENÇÃO! Use a técnica de dedução de múltiplos por uso do resto da divisão e não usando a técnica de incrementar em 5. Para saber se um número é múltiplo de 5, basta descobrir se o resto da divisão dele por 5 é 0.   -->

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 11</title>
+    <style> .container{display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 100px;} 
+    .form{padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #63b1bc ; border-radius: 8px;}
+    </style>
+</head>
+<body>
+       <div class="container">
+              <div class="form">
+                     Quantas voltas? <input id="inputVoltas">
+                     <button onclick="voltas()">
+                            Iniciar corrida!
+                     </button>
+              </div>
+              <div id="divCorrida"></div>
+       </div>
+</body>
+</html>
+<script>
+       function voltas(){
+              var voltas = Number(inputVoltas.value)
+              var base = 1
+
+              while (base <= voltas){
+                     divCorrida.innerHTML += `Carro dando a ${base}ª volta 🏎️ <br>`
+                     base ++
+              }
+
+              divCorrida.innerHTML += `Corrida finalizada!🏁🏎️`
+       }
+</script>
+<!-- (ENTREGAR) 11. Crie um programa o qual: 
+
+a) Pergunte ao usuário quantas voltas um carro dará numa corrida 
+
+b) Ao clicar num botão "Iniciar corrida!"... 
+
+c) Exiba, debaixo do botão, frases como estas: 
+
+       Carro dando a 1ª volta 
+
+       Carro dando a 2ª volta 
+
+       Carro dando a 3ª volta 
+
+d) Até que o carro "termine" a corrida. Nesse caso, exiba abaixo de tudo, somente 1 vez, a frase: 
+
+       Corrida finalizada! -->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 05</title>
+    <style> 
+        .container{display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 100px;} .form{padding: 20px; background-color: #63b1bc ; border-radius: 8px;} 
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <button onclick="contar()">
+            Números cabalísticos
+            </button>
+        </div>
+        <div id="divNumeros"></div>
+    </div>    
+</body>
+</html>
+<script>
+    function contar(){
+        var valor = 1
+        while(valor <= 30){
+            
+                if(valor == 3){
+                    divNumeros.innerHTML = ` <br>`
+                    }   
+                valor ++    
+        }
+    }
+</script>
+<!-- (ENTREGAR) 5. Crie um programa o qual: 
+
+a) Ao clicar num botão "Números cabalísticos"... 
+
+c) Exiba, debaixo do botão, os números de 1 a 30, um embaixo do outro, PORÉM, não devem aparecer os números cabalísticos 3, 4, 7, 10 e 12.  
+
+OBS: não se atenha ao termo "cabalístico", o que importa é somente travar essa sequência de números! -->
