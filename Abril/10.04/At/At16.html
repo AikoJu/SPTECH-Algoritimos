@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {background-color: rgb(186, 240, 240);} 
+          .container{ display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 100px;}  
+          .form{font-family:sans-serif ; font-size: larger; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #63b1bc ; border-radius: 8px;}
+    </style>
+    <title>Atividade 16</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            Quantas pessoas vão no carro? <input id="inputPessoas">
+            <button onclick="carona()">
+                #Partiu carona
+            </button>
+            <div id="divCarona"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function carona(){
+        var pessoas = Number(inputPessoas.value)
+        
+            divCarona.innerHTML += `Entrou o 1º passageiro (que é o(a) motorista)<br>`
+        for(var base = 2;
+            base <= pessoas;
+            base++){
+                if(base <= 5 ){
+                    divCarona.innerHTML += `Entrou o ${base}º passageiro <br>`
+                }else{
+                    divCarona.innerHTML += `O ${base}º passageiro terá que esperar!<br> `
+                }
+        }
+    }
+</script>
+
+
+
+<!-- 16. Crie um programa que simule a entrada de caronas num carro: 
+
+a) Pergunte ao usuário quantas pessoas, vão entrar no carro 
+
+b) Ao clicar num botão "#Partiu Carona"... 
+
+c) Exiba, debaixo do botão, frases como estas: 
+
+Entrou o 1º passageiro (que é o(a) motorista) 
+
+Entrou o 2º passageiro 
+
+Entrou o 3º passageiro 
+
+Entrou o 4º passageiro 
+
+Entrou o 5º passageiro 
+
+O 6º passageiro terá que esperar! 
+
+O 7º passageiro terá que esperar! 
+
+  
+
+d) Note que, sempre na frase do 1º passageiro, deve constar ao lado que é motorista 
+
+e) A partir do 6º passageiro, a frase muda, pois o carro só comporta 5 passageiros  -->

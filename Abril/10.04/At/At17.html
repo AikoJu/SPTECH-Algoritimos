@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {background-color: rgb(186, 240, 240);} 
+          .container{ display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 100px;}  
+          .form{font-family:sans-serif ; font-size: larger; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #63b1bc ; border-radius: 8px;}
+    </style>
+    <title>Atividade 17</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            Quantas pessoas vão no carro? <input id="inputPessoas">
+            Quantos lugares tem no carro? <input id="inputLugares">
+            <button onclick="carona()">
+                #Partiu carona
+            </button>
+            <div id="divCarona"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function carona(){
+        var pessoas = Number(inputPessoas.value)
+        var lugares = Number(inputLugares.value)
+            divCarona.innerHTML =`` 
+            divCarona.innerHTML += `Entrou o 1º passageiro (que é o(a) motorista)<br>`
+        for(var base = 2;
+            base <= pessoas;
+            base++){
+                if(base <= lugares ){
+                    divCarona.innerHTML += `Entrou o ${base}º passageiro <br>`
+                }else{
+                    divCarona.innerHTML += `O ${base}º passageiro terá que esperar!<br> `
+                }
+        }
+    }
+</script>
+
+
+ 
+
+<!-- 17. Incremente a questão anterior de tal forma que: 
+
+a) Também tenha um campo no qual o usuário indique a capacidade de passageiros que o veículo suporta 
+
+b) Ao clicar no botão, as frases só começam a mostrar que o passageiro terá que esperar quando a capacidade indicada em a) for excedida. -->
+

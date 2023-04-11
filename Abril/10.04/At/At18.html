@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {background-color: rgb(186, 240, 240);} 
+          .container{ display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 100px;}  
+          .form{font-family:sans-serif ; font-size: larger; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #63b1bc ; border-radius: 8px;}
+    </style>
+    <title>Atividade 1</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+             Quantas cocas já tomou na vida? <input id="inputCoca">
+            <button onclick="quantidade()">
+                Ver quantidade
+            </button>
+            <div id="divVisualizar"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function quantidade(){
+        var coca = Number(inputCoca.value)
+        divVisualizar.innerHTML = ``
+        for(base = 1;
+            base <= coca;
+            base ++){
+                divVisualizar.innerHTML += `<img width ="180px" src=https://www.imagensempng.com.br/wp-content/uploads/2022/01/2442.png">`
+            }
+    }
+</script>
+<!-- 18. Crie um programa no qual: 
+
+a) O usuário informe quantas "Coca-Cola" ele acha que já bebeu na vida 
+
+b) Ao clicar em "Ver a quantidade", devem aparecer na tela N garrafinhas (ou latas, se preferir) de "Coca-Cola" uma ao lado da outra, conforme a quantidade informada em a) 
+
+c) Para saber se seu programa está correto, teste algo assim: informe 20 e clique. Depois informe só 3 e clique novamente. Veja se vão aparecer só 3 garrafinhas (ou latas) na tela. -->
