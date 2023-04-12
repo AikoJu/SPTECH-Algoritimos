@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 20</title>
+</head>
+<body>
+    Quantidade de depósitos: <input id="inputDeposito">
+    <br><br>
+    Valor dos depósitos: <input id="inputValor">
+    <br><br>
+    <button onclick="grana()">
+        Acompanhar grana
+    </button>
+    <br>
+    <div id="divConta"></div>
+</body>
+</html>
+<script>
+    function grana(){
+        var quantidade = Number(inputDeposito.value)
+        var valor = Number(inputValor.value)
+        
+        
+        divConta.innerHTML = ``
+
+        for(var base = 1;
+            base <= quantidade;
+            base ++){
+                var valorAtual = base * valor
+                divConta.innerHTML += `${base}° Mês: R$${valorAtual}<br>`
+            }
+            divConta.innerHTML += `Total guardado: ${valorAtual}`
+    }
+</script>
+
+<!-- 20. Crie um programa no qual: 
+
+a) O usuário informa quantos depósitos ele fez no banco 
+
+b) O usuário informa o valor de cada depósito, pois ele sempre depositava exatamente o mesmo valor 
+
+c) Ao clicar em "Acompanhar grana", deve aparecer o valor, mês a mês, como neste exemplo 
+
+    1º Mês: R$ 500.00 
+
+    2º Mês: R$ 1000.00 
+    3º Mês: R$ 1500.00 
+    4º Mês: R$ 2000.00 
+    5º Mês: R$ 2500.00 
+    Total guardado: R$2500.00 
+
+No exemplo acima, o usuário informou 5 depósitos e 500 por depósito.  -->
