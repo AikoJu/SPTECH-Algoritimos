@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 20</title>
+</head>
+<body>
+    Quantidade de depósitos: <input id="inputDeposito">
+    <br><br>
+    Valor dos depósitos: <input id="inputValor">
+    <br><br>
+    <button onclick="grana()">
+        Acompanhar grana
+    </button>
+    <br>
+    <div id="divConta"></div>
+</body>
+</html>
+<script>
+    function grana(){
+        var quantidade = Number(inputDeposito.value)
+        var valor = Number(inputValor.value)
+        
+        
+        divConta.innerHTML = ``
+
+        for(var base = 1;
+            base <= quantidade;
+            base ++){
+                var valorAtual = base * valor
+                var bonus = valorAtual + (valorAtual * 0.01)
+
+                if(valorAtual%3 == 0){
+                divConta.innerHTML += `${base}° Mês: R$${valorAtual += bonus}<br>`
+                }else{
+                    
+                    divConta.innerHTML += `${base}° Mês: R$${valorAtual}<br>`
+                }
+    }
+    divConta.innerHTML += `Total guardado: ${valorAtual}`
+}
+</script>
+
+<!-- 21. Refaça o programa anterior de tal forma que, a cada 3 depósitos o banco dê um bônus de 1% sobre o valor acumulado após o depósito. Ex: 
+
+    1º Mês: R$ 500.00 
+
+    2º Mês: R$ 1000.00 
+    3º Mês: R$ 1515.00 
+
+    4º Mês: R$ 2015.00 
+
+    5º Mês: R$ 2515.00 
+    6º Mês: R$ 3045.15 
+
+    Total guardado: R$3045.15 
+
+Note que nos meses 3 e 6, o valor aumentou em 1% do total após o depósito.  -->

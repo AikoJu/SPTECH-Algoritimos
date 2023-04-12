@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 03</title>
+    <style>
+    body {background-color: rgb(186, 240, 240); font-family:sans-serif ; font-size: larger;} 
+    .container{ display: flex; flex-direction: column ; align-items: center;margin-top: 100px;} 
+    .form{padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #63b1bc ; border-radius: 8px;}     
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            Digite a frase: <input id="inputFrase"><br>
+            <Button onclick="frase()">
+                Mensagem
+            </Button>
+        </div>
+        <div id="divMensagem"></div>
+    </div>
+</body>
+
+</html>
+<script>
+    function frase() {
+        var frase = inputFrase.value
+    
+        divMensagem.innerHTML = ``
+        for (var vezes =1 ;
+            vezes <= 7;
+            vezes ++) {
+            divMensagem.innerHTML += `${vezes}. ${frase}<br>`
+        }
+    }
+</script>
+<!-- (ENTREGAR) 3. Refaça o programa anterior de tal forma que, antes de cada frase apareça um contador. Ex: Se a frase digitada foi “Boa Tarde” a página ficará assim: 
+
+   1. Boa tarde 
+
+   2. Boa tarde 
+
+   ... 
+
+   7. Boa tarde -->

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01</title>
+    <style>.container{display: flex; flex-direction: column; justify-content: center; align-items: center;} 
+    .botao{padding: 20px; background-color: #63b1bc ; border-radius: 8px;} button{border-radius: 5px;}</style>
+</head>
+<body>
+    <div class="container">
+        <div class="botao">
+    <button onclick="contar()">
+        Contar
+    </button>
+    <div id="divNumero"></div>
+</div>    
+</div>
+</body>
+</html>
+<script>
+    function contar(){
+
+        for (var numero = 1;
+            numero <= 15;
+            numero++){
+            divNumero.innerHTML += `${numero} <br>` 
+        }
+    }
+</script>
+<!-- 1. Crie um programa o qual: 
+; a) Ao clicar num botão "Contar"... 
+; b) Exiba, debaixo do botão, os números de 1 a 15, um embaixo do outro. -->

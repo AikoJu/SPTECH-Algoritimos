@@ -31,8 +31,13 @@
 
  
 
+(ENTREGAR) 18. Crie um programa no qual: 
 
+a) O usuário informe quantas "Coca-Cola" ele acha que já bebeu na vida 
 
+b) Ao clicar em "Ver a quantidade", devem aparecer na tela N garrafinhas (ou latas, se preferir) de "Coca-Cola" uma ao lado da outra, conforme a quantidade informada em a) 
+
+c) Para saber se seu programa está correto, teste algo assim: informe 20 e clique. Depois informe só 3 e clique novamente. Veja se vão aparecer só 3 garrafinhas (ou latas) na tela. 
 
 
 
@@ -54,24 +59,22 @@ c) Ao clicar em "Acompanhar grana", deve aparecer o valor, mês a mês, como n
 
 No exemplo acima, o usuário informou 5 depósitos e 500 por depósito. 
 
+(ENTREGAR) 24. Crie  um programa o qual:
+
+a) Receba um número do usuário, que deve estar entre 0 e 100;
+
+b) Ao clicar no botão "Ver Divisores", deve exibir na tela, abaixo do botão, todos os divisores do número informado, como o exemplo abaixo, onde o usuário inseriu o número "10": 
+
+     Divisores do Número 10:
+
+     1
+
+     2
+
+     5
+
+     10
+
+OBS: para saber se o número é divisível por outro, o resto da divisão deve ser 0;  
 
 
-21. Refaça o programa anterior de tal forma que, a cada 3 depósitos o banco dê um bônus de 1% sobre o valor acumulado após o depósito. Ex: 
-
-    1º Mês: R$ 500.00 
-
-    2º Mês: R$ 1000.00 
-    3º Mês: R$ 1515.00 
-
-    4º Mês: R$ 2015.00 
-
-    5º Mês: R$ 2515.00 
-    6º Mês: R$ 3045.15 
-
-    Total guardado: R$3045.15 
-
-Note que nos meses 3 e 6, o valor aumentou em 1% do total após o depósito. 
-
-
-
-22. Refaça o programa anterior de tal forma de que, somente nos meses que ganhou o "bônus", apareça uma imagem de uma estrela bem pequena (reduza a imagem para ficar quase do tamanho da fonte) à direita do valor acumulado. 
