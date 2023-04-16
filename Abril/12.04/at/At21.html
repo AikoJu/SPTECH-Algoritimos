@@ -4,43 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {background-color: rgb(186, 240, 240);} 
+          .container{ display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 100px;}  
+          .form{font-family:sans-serif ; font-size: larger; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #63b1bc ; border-radius: 8px;}
+    </style>
     <title>Atividade 21</title>
 </head>
 <body>
-    Quantidade de depósitos: <input id="inputDeposito">
-    <br><br>
-    Valor dos depósitos: <input id="inputValor">
-    <br><br>
-    <button onclick="grana()">
+<div class="container">
+    <div class="form">
+        Quantidade de depósitos: <input id="inputQuantidade">
+        <br>
+        Valor dos depósitos: <input id="inputValor">
+        <br>
+        <button onclick="conta()">
         Acompanhar grana
-    </button>
-    <br>
-    <div id="divConta"></div>
+        </button> 
+        <br>
+        <div id="divConta"></div>
+    </div>
+</div>
 </body>
 </html>
 <script>
-    function grana(){
-        var quantidade = Number(inputDeposito.value)
-        var valor = Number(inputValor.value)
-        
-        
-        divConta.innerHTML = ``
+    function conta (){
+    var quantidade = Number(inputQuantidade.value)
+    var valor = Number(inputValor.value)
+    var img = `<img width="20px" src="https://www.pngmart.com/files/16/Gold-Star-PNG-Image.png">`
+    var valorAtual = 0
 
-        for(var base = 1;
-            base <= quantidade;
-            base ++){
-            var valorAtual = valor * base    
-            
-                                        
-                if(valorAtual%3 == 0){
-                    var bonus = valorAtual * 0.01     
-                    divConta.innerHTML += `${base}° Mês: R$${valorAtual += bonus}<br>`
-                }else{
-                    divConta.innerHTML += `${base}° Mês: R$${valorAtual}<br>`
-                }
+    divConta.innerHTML = ``
+    for(var i = 1;
+        i <= quantidade;
+        i ++){
+            valorAtual += valor
+
+            if(valorAtual%3 == 0){
+                var bonus = valorAtual * 0.01
+                valorAtual += bonus
+                divConta.innerHTML += `${i}º Mês: R$${valorAtual} ${img}<br> `
+            }
+
+            else{
+                divConta.innerHTML += `${i}º Mês: R$${valorAtual} <br>`
+            }
     }
-    divConta.innerHTML += `Total guardado: ${valorAtual}`
+    divConta.innerHTML += `Total guardado ${valorAtual}`
 }
+
 </script>
 
 <!-- 21. Refaça o programa anterior de tal forma que, a cada 3 depósitos o banco dê um bônus de 1% sobre o valor acumulado após o depósito. Ex: 

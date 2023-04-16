@@ -9,29 +9,41 @@
           .container{ display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 100px;}  
           .form{font-family:sans-serif ; font-size: larger; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #63b1bc ; border-radius: 8px;}
     </style>
-    <title>Atividade 1</title>
+    <title>Atividade 24</title>
 </head>
 <body>
     <div class="container">
         <div class="form">
-             <input id="input">
-            <button onclick="carona()">
-                
+             Digite o número que deseja ver: <input placeholder="0 a 100" id="inputNumero">
+            <button onclick="divisiveis()">
+                Ver divisores
             </button>
-            <div id="div"></div>
+            <div id="divDivisores"></div>
         </div>
     </div>
 </body>
 </html>
 <script>
-    function (){
+    function divisiveis(){
+        var numero = Number(inputNumero.value)
         
+        divDivisores.innerHTML = ``
+        for(var i = 1;
+                i <= numero;
+                i++){
+                       var resultado = (i*numero)/numero
+                       
+                    if(resultado/numero == i){
+                        divDivisores.innerHTML += `${resultado} <br>`
+                    }
+                
+                }
     }
 </script>
 
  
 
-(ENTREGAR) 24. Crie  um programa o qual:
+<!-- (ENTREGAR) 24. Crie  um programa o qual:
 
 a) Receba um número do usuário, que deve estar entre 0 e 100;
 
@@ -47,4 +59,4 @@ b) Ao clicar no botão "Ver Divisores", deve exibir na tela, abaixo do botão, t
 
      10
 
-OBS: para saber se o número é divisível por outro, o resto da divisão deve ser 0;  
+OBS: para saber se o número é divisível por outro, o resto da divisão deve ser 0;   -->
