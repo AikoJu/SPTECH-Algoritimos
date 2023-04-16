@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 20</title>
+    <title>Atividade 21</title>
 </head>
 <body>
     Quantidade de depósitos: <input id="inputDeposito">
@@ -29,13 +29,13 @@
         for(var base = 1;
             base <= quantidade;
             base ++){
-                var valorAtual = base * valor
-                var bonus = valorAtual + (valorAtual * 0.01)
-
+            var valorAtual = valor * base    
+            
+                                        
                 if(valorAtual%3 == 0){
-                divConta.innerHTML += `${base}° Mês: R$${valorAtual += bonus}<br>`
+                    var bonus = valorAtual * 0.01     
+                    divConta.innerHTML += `${base}° Mês: R$${valorAtual += bonus}<br>`
                 }else{
-                    
                     divConta.innerHTML += `${base}° Mês: R$${valorAtual}<br>`
                 }
     }
