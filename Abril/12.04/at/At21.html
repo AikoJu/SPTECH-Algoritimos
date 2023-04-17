@@ -40,7 +40,7 @@
         i ++){
             valorAtual += valor
 
-            if(valorAtual%3 == 0){
+            if( i %3 == 0){
                 var bonus = valorAtual * 0.01
                 valorAtual += bonus
                 divConta.innerHTML += `${i}º Mês: R$${valorAtual} ${img}<br> `
