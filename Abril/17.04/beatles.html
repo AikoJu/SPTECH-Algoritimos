@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey Jude</title>
+</head>
+<body>
+    Quantidade de takes: <input id="inputTakes">
+    <br><br>
+    Quantidade miníma para 2º padrão? <input id="inputPadrao2">
+    <br><br>
+    <button onclick = "simulador()">
+        Simular
+    </button>    
+    <br><br>
+    <div id="divMusica"></div>
+</body>
+</html>
+<script>
+    function simulador(){
+        divMusica.innerHTML = ``
+        var takes = Number(inputTakes.value)
+        var padraoMinimo = Number(inputPadrao2.value)
+        var padrao1 = `nah, nah, nah, nah, nah, nah, nah, nah, nah,`
+        var padrao2 = 5
+        var musica = `Hey, Jude, don't make it bad<br>
+                    Take a sad song and make it better<br>
+                    Remember to let her into your heart<br>
+                    Then you can start to make it better<br>
+                    Hey, Jude, don't be afraid<br>
+                    You were made to go out and get her<br>
+                    The minute you let her under your skin<br>
+                    Then you begin to make it better<br>
+                    And anytime you feel the pain,<br> 
+                    Hey, Jude, refrain<br>
+                    Don't carry the world upon your shoulders<br>
+                    For well you know that it's a fool<br>
+                    Who plays it cool<br>
+                    By making his world a little colder<br>
+                    ${padrao1}<br> 
+                    Hey, Jude, don't let me down<br>
+                    You have found her, now go and get her<br>
+                    Remember to let her into your heart<br>
+                    Then you can start to make it better<br>
+                    So let it out and let it in,<br> 
+                    Hey, Jude, begin<br>
+                    You're waiting for someone to perform with<br>
+                    And don't you know that it's just you,<br>
+                    Hey, Jude, you'll do<br>
+                    The movement you need is on your shoulder <br>
+                    ${padrao1} <br>
+                    Hey, Jude, don't make it bad<br>
+                    Take a sad song and make it better<br>
+                    Remember to let her under your skin<br>
+                    Then you'll begin to make it better, better, better, better, better... oh!<br>
+                    ${padrao2}<br><br>`
+
+        for(var i = 1;
+                i <= takes;
+                i++){
+            
+                    divMusica.innerHTML += ` <br>${musica}`
+
+
+
+                }
+                divMusica.innerHTML += `Quantidade total de Takes: ${takes}<br>
+                                        Média de “Nah” por Take: ${takes}<br> 
+                                        Quantidade tota
+                                        l de “Nah” somada em todos os Takes: ${takes}`
+    }
+</script>

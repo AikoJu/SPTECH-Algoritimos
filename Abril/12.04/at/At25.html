@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {background-color: rgb(186, 240, 240);} 
+          .container{ display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 100px;}  
+          .form{font-family:sans-serif ; font-size: larger; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #63b1bc ; border-radius: 8px;}
+    </style>
+    <title>Atividade 25</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+             Digite o número que deseja ver: <input placeholder="0 a 100" id="inputNumero">
+            <button onclick="divisiveis()">
+                Ver divisores
+            </button>
+            <div id="divDivisores"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function divisiveis(){
+        var numero = Number(inputNumero.value)
+        var ePrimo = true
+
+            divDivisores.innerHTML = ``
+
+        if(numero > 1){
+            for(var i = 2;
+                    i <= numero;
+                    i ++){
+                if(numero % i == 0){
+                    ePrimo = false
+                }
+
+            }
+        }
+
+        if(ePrimo){
+            divDivisores.innerHTML = `${numero} não é um número primo`
+        }else{
+            divDivisores.innerHTML = `${numero}  é um numero primo`
+        }
+}    
+    
+    
+</script>
+
+ 
+
+<!-- (ENTREGAR) 24. Crie  um programa o qual:
+
+a) Receba um número do usuário, que deve estar entre 0 e 100;
+
+b) Ao clicar no botão "Ver Divisores", deve exibir na tela, abaixo do botão, todos os divisores do número informado, como o exemplo abaixo, onde o usuário inseriu o número "10": 
+
+     Divisores do Número 10:
+
+     1
+
+     2
+
+     5
+
+     10
+
+OBS: para saber se o número é divisível por outro, o resto da divisão deve ser 0;   -->

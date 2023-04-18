@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Menor número: <input type="text" id="inputMin">
+    <br><br>
+    Maior número: <input type="text" id="inputMax">
+    <br><br>
+    Numero divisivel <input type="text" id="inputNumDiv"><br>
+    <button onclick="calc()">
+        Verificar
+    </button><br>
+<br><br>
+
+    <div id="divConta"></div>
+</body>
+</html>
+<script>
+    function calc(){
+        divConta.innerHTML = ``
+        var min = Number(inputMin.value)
+        var max = Number(inputMax.value)
+        
+
+
+        if(min > 1 && max > min && max < 100){
+            
+            for (var i = min;
+                    i < max;
+                    i++){
+                                    
+                    }
+            divConta.innerHTML = `QUANTIDADE TOTAL DE NÚMEROS EXIBIDOS: ${i} 
+                                <br><br>
+                                SOMATÓRIO DOS NÚMEROS EXIBIDOS: ${i} 
+                                <br><br>
+                                MÉDIA DOS NÚMEROS EXIBIDOS: ${i} 
+                                <br><br>
+                                MAIOR NÚMERO EXIBIDO: ${i} 
+                                <br><br>
+                                MENOR NÚMERO EXIBIDO: ${i}
+                                `
+        }
+        else if(min <= 0){
+            alert("O valor minímo não pode ser menor ou igual a zero!")
+        }
+        else if(max > 100){
+            alert("O valor máximo não pode ser maior que cem!") 
+        }        
+        else if(min > max){
+            alert("O valor minímo é maior que o valor máximo!")
+        }
+    }
+</script>
+
+<!-- 23. Crie um programa o qual: 
+
+a) Receba o limite inferior da amostragem. Esse número que ser maior que 1, caso contrário emitir mensagem explicativa e não seguir em frente.  
+
+b) Receba o limite superior da amostragem. Esse número que ser menor que 100 e maior que o limite inferior (item a), caso contrário emitir mensagem explicativa e não seguir em frente 
+
+c) Receba o número para testar a divisibilidade, esse número tem que estar entre 3 e 10, caso contrário, emitir mensagem explicativa e não seguir em frente. 
+
+d) Tenha num botão "Contar" que quando clicado exiba todos os números divisíveis pelo número informado no item c), desde o limite inferior (item a.) até o limite superior (item b.). Exibir esses números um ao lado do outro separados por uma vírgula e um espaço (, ).  
+
+e) Ao final, sem apagar as mensagens anteriores mostre as seguintes mensagens: 
+
+    QUANTIDADE TOTAL DE NÚMEROS EXIBIDOS: 99 
+
+    SOMATÓRIO DOS NÚMEROS EXIBIDOS: 999 
+
+    MÉDIA DOS NÚMEROS EXIBIDOS: 99,99 
+
+    MAIOR NÚMERO EXIBIDO: 99 
+
+    MENOR NÚMERO EXIBIDO: 99 -->
