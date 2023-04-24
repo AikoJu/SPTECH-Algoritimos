@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Doces</h1>
+    Macarons: <input id="inputQuantidadeMacarons"> <br>
+    Preço: <input id="inputPrecoMacaron">
+    <br><br>
+    Brigadeiros Gourmets: <input id="inputQuantidadeBrigadeiros"><br>
+    Preço: <input id="inputPrecoBrigadeiro">
+    <br><br>
+    Cupcakes: <input id="inputQuantidadeCupcakes"><br>
+    Preço: <input id="inputPrecoCupcake"><br>
+    <br>
+    Cheesecakes: <input id="inputQuantidadeCheesecakes"><br>
+    Preço: <input id="inputPrecoCheesecake">
+    <br><br>
+    <button onclick="verificar()">
+        Verificar Vendas
+    </button>
+    <br><br>
+    <div id="divDoces"></div>
+</body>
+</html>
+<script>
+    function verificar(){
+        var macaron = Number(inputQuantidadeMacarons.value)
+        var imgMacaron = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVjWFizahxiIKqwS_ck5_8afRVpYg6k4xv9w&usqp=CAU" width="50px">`
+        var brigadeiro = Number(inputQuantidadeBrigadeiros.value)
+        var imgBrigadeiro = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3z0px81zWEGQAiXdTbs_y6A7kDmggx6ZOjw&usqp=CAU" width="50px">`
+        var cupcake = Number(inputQuantidadeCupcakes.value)
+        var imgCupcake = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBTYNG3oXnUmfhvzP3wOWAkOp4LEycQqEtMQ&usqp=CAU" width="50px">`
+        var cheesecake = Number(inputQuantidadeCheesecakes.value)
+        var imgCheesecake = `<img src="https://www.daninoce.com.br/wp-content/uploads/2013/12/cheesecake-de-natal-ickfd-03.jpg" width="50px">`
+
+        var precoMacaron = Number(inputPrecoMacaron.value)
+        var precoBrigadeiro = Number(inputPrecoBrigadeiro.value)
+        var precoCupcake = Number(inputPrecoCupcake.value)
+        var precoCheesecake = Number(inputPrecoCheesecake.value)
+            
+        var valorMacaron = macaron * precoMacaron
+        var valorBrigadeiro = brigadeiro * precoBrigadeiro
+        var valorCupcake = cupcake * precoCupcake
+        var valorCheesecake = cheesecake * precoCheesecake
+        var valorTotal = valorMacaron + valorBrigadeiro + valorCupcake + valorCheesecake
+        var quantidadeTotal = macaron + brigadeiro + cupcake + cheesecake
+
+        var validacaoCampoVazio = (precoBrigadeiro !=  `` && precoCheesecake != `` && precoCupcake != `` && precoMacaron != ``&&
+         brigadeiro != `` && cheesecake != `` && cupcake != `` && macaron != `` )  
+        var validacaoNegativo = (precoBrigadeiro > -1 && precoCheesecake > -1 && precoCupcake > -1 && precoMacaron > -1 &&
+         brigadeiro > -1 && cheesecake > -1 && cupcake > -1 && macaron > -1 )
+ 
+        if(validacaoCampoVazio && validacaoNegativo){
+            
+            for(var venda = 1;
+                    venda <= quantidadeTotal;
+                    venda ++){
+
+                        if(venda <= macaron){            
+                            divDoces.innerHTML += `Venda ${venda} ${imgMacaron} R$${precoMacaron}<br>`
+                            } 
+                        
+                        else if(venda <= (brigadeiro + macaron)){
+                                    divDoces.innerHTML += `Venda ${venda} ${imgBrigadeiro} R$${precoBrigadeiro}<br>`
+                                }
+                        else if(venda <= (cupcake + brigadeiro + macaron)){
+                                    divDoces.innerHTML += `Venda ${venda} ${imgCupcake} R$${precoCupcake}<br>`
+                                }
+                        else{
+                                divDoces.innerHTML += `Venda ${venda} ${imgCheesecake} R$${precoCheesecake}<br>`
+                                }
+
+                    }
+                        divDoces.innerHTML += `Com a quantidade de ${macaron} Macarons, ${brigadeiro} Brigadeiros, ${cupcake} Cupcakes e ${cheesecake} Cheesecakes, a venda totalizará R$${valorTotal}`
+        }else{
+            alert("Valores inválidos")
+        }
+
+    }
+</script>
+<!-- 1. Dori Valdossin é dono de uma doceria em São Paulo, onde a sua especialidade são os doces gourmets.
+
+Seu estabelecimento trabalha com diversos tipos de doces gourmets, porém os mais famosos do seu menu são: 
+
+- Macarons: um doce francês feito com duas conchas de amêndoa com recheio no meio, que são populares por sua aparência colorida e delicada, bem como seus sabores únicos;
+
+- Brigadeiros: um doce brasileiro feito com leite condensado, manteiga e chocolate em pó, que nas versões gourmet, geralmente apresentam sabores inovadores e criativos, como creme de avelã, limão siciliano, café, entre outros;
+
+- Cupcakes: mini bolos decorados com glacê e recheados com sabores deliciosos, como baunilha, chocolate, red velvet, entre outros, dos quais são populares em casamentos, festas de aniversário e outros eventos;
+
+- Cheesecakes: uma sobremesa feita com cream cheese, açúcar e biscoitos triturados para a base, nos quais geralmente apresentam sabores como framboesa, caramelo salgado, limão, entre outros;
+
+Para auxiliar Dori, crie um programa o qual: 
+
+a) Solicite a quantidade de cada doce a ser vendido (Macarons, Brigadeiros Gourmets, Cupcakes e Cheesecakes).
+
+b) Solicite o preço da unidade de cada tipo de doce.
+
+c) Ao clicar no botão "Verificar Vendas", caso todos os valores estejam preenchidos e não sejam negativos, prossiga. Caso contrário, exiba uma mensagem de erro explicativa e encerre.
+
+d) De acordo com a quantidade de cada produto informado, exiba um extrato contendo: 
+
+        "NÚMERO DA VENDA   -   IMAGEM DO DOCE   -   R$ VALOR UNITÁRIO"
+
+e) A ordem de listagem dos doces sempre será: 
+
+          Primeiro os "Macarons"
+          Logo após, os "Brigadeiros"
+          Em seguida, os "Cupcakes"
+          Por último, os "Cheesecakes" 
+
+Caso a quantidade de algum desses doces seja 0, deve pular para a listagem do próximo doce, continuando a contagem da venda (ou seja, caso pule a listagem dos "Macarons", deve começar direto com o "Brigadeiro" sendo a primeira venda).
+
+e) Ao finalizar a listagem, deve exibir uma mensagem com uma frase como esta: 
+
+        "Com a quantidade de 1111 Macarons, 2222 Brigadeiros, 3333 Cupcakes e 4444 Cheesecakes, a venda totalizará R$5555"
+
+OBS: note que são 4 entradas para o item a) e mais 4 entradas para o item b).
+
+OBS II: crie as tags img através do JavaScript para gerar as imagens dos doces dinamicamente, de acordo com cada mensagem exibida, utilizando imagens pequenas para facilitar a visualização das linhas.
+
+OBS III: repare que no exemplo de funcionamento, ele pula os Cupcakes, porém continua a contagem da venda.
+
+EXEMPLO DE FUNCIONAMENTO: 
+
+           "Venda 1 - <Imagem de Macaron> - R$3.99"
+
+           "Venda 2 - <Imagem de Macaron> - R$3.99"
+
+           "Venda 3 - <Imagem de Brigadeiro> - R$4.99"
+
+           "Venda 4 - <Imagem de Brigadeiro> - R$4.99"
+
+           "Venda 5 - <Imagem de Brigadeiro> - R$4.99"
+
+           "Venda 6 - <Imagem de Cheesecake> - R$6.99"
+
+           "Venda 7 - <Imagem de Cheesecake> - R$6.99"
+
+           "Com a quantidade de 2 Macarons, 3 Brigadeiros, 0 Cupcakes e 2 Cheesecakes, a venda totalizará R$36.93" -->
+
+
+

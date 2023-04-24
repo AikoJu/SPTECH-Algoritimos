@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuada 2</title>
+</head>
+<body>
+    Quantidade de energia: <input id="inputQuantidadeEnergia">
+    <br>
+    Quantidade de clones: <input id="inputQuantidadeClones">   
+    <br>
+    Quantidade de clones por linha: <input id="inputQuantidadeClonesLinha">
+    <br>
+    <button onclick="clones()">
+        Criar clones
+    </button><br>
+    <div id="divClones">
+    </div>
+</body>
+</html>
+ <script>
+    function clones(){
+        divClones.innerHTML = ``
+        var quantidadeEnergia = Number(inputQuantidadeEnergia.value)
+        var quantidadeClones = Number(inputQuantidadeClones.value)
+        var quantidadeLinhas = Number(inputQuantidadeClonesLinha.value)
+        var energiaVerificada = (quantidadeEnergia >= 20 && quantidadeEnergia <= 5000)
+        var quantidadeVerificada = (quantidadeClones >= 0 && quantidadeClones <= 250)
+        var linhaVerificada = (quantidadeLinhas > 0)
+        var valorSobraDeEnergia = quantidadeEnergia - (quantidadeClones*20)
+        var valorSobraDeEnergiaPorcentagem = (valorSobraDeEnergia * quantidadeEnergia )/100
+        var validacao1 = quantidadeClones > 50 && valorSobraDeEnergiaPorcentagem >= 20
+        var validacao2 = quantidadeClones >= 20 && quantidadeClones <= 50 && valorSobraDeEnergiaPorcentagem >= 10
+        var quebraLinha = `<br>`
+        
+        var img = `<img src="naruto.png" width="100px"> `
+        if(energiaVerificada && quantidadeVerificada && linhaVerificada){
+            if(quantidadeEnergia >= (quantidadeClones*20)){
+                    for(var i = 1;
+                            i <= quantidadeClones;
+                            i++){
+                                divClones.innerHTML += img
+                                if(i % quantidadeLinhas == 0 ){
+                                    divClones.innerHTML += quebraLinha    
+                                }
+                                
+                            }
+                divClones.innerHTML += `<br>ANÁLISE DA GERAÇÃO DE CLONES <br>
+
+                                        Energia Inicial: ${quantidadeEnergia}<br>  
+
+                                        Qtde de Clones: ${quantidadeClones}<br>
+
+                                       Sobra de Energia: ${valorSobraDeEnergia}<br>`
+                if(valorSobraDeEnergia > 1000 || validacao1 ){
+                    divClones.innerHTML += `PROVAVELMENTE VOCÊ VAI GANHAR`
+                }
+                else if(valorSobraDeEnergia > 500 || validacao2  ){
+                    divClones.innerHTML += `A LUTA VAI SER BOA`
+                }else{
+                    divClones.innerHTML += `TORÇA PARA O ADVERSÁRIO SER FRAQUINHO`
+                }
+}else{
+                alert("Energia insuficiente")
+            } 
+        }else{
+            alert(`ERRO NA ENTRADA DE DADOS – Energia tem que ser entre 20 e 5.000. Quantidade de Clones tem que ser entre 0 e 250. Quantidade de Clones por linha tem que ser maior que 0`)
+        }
+
+    }
+ </script>
