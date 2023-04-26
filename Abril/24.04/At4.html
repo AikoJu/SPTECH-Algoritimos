@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {background-color: rgb(186, 240, 240);} 
+          .container{ display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 100px;}  
+          .form{font-family:sans-serif ; font-size: larger; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #63b1bc ; border-radius: 8px;}
+    </style>
+    <title>Atividade 2</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            Nome do time : <input id="inputNomeA">
+             Quantidade de vitórias: <input id="inputVitoriasA">
+             Quantidade de empates: <input id="inputEmpatesA">
+             Quantidade de derrotas: <input id="inputDerrotasA">
+<br><br>
+
+             Nome do time : <input id="inputNomeB">
+             Quantidade de vitórias: <input id="inputVitoriasB">
+             Quantidade de empates: <input id="inputEmpatesB">
+             Quantidade de derrotas: <input id="inputDerrotasB">
+<br><br>
+            Nome do time : <input id="inputNomeC">
+            Quantidade de vitórias: <input id="inputVitoriasC">
+            Quantidade de empates: <input id="inputEmpatesC">
+            Quantidade de derrotas: <input id="inputDerrotasC">
+            
+            <button onclick="disputa()">
+                Comparar campanhas
+            </button>
+            <div id="divPontos"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function disputa(){
+        var timeA ={
+            nome: inputNomeA.value,            
+            vitoria : Number(inputVitoriasA.value),
+            empate : Number(inputEmpatesA.value),
+            derrota: Number(inputDerrotasA.value),
+            pontos : function(){
+                var pontosA = (this.vitoria * 3) + this.empate
+            }
+            }  
+            var jogosA = timeA.derrota + timeA.empate + timeA.vitoria    
+        
+        var timeB ={
+            nome: inputNomeB.value,
+            vitoria : Number(inputVitoriasB.value),
+            empate : Number(inputEmpatesB.value),
+            derrota: Number(inputDerrotasB.value),
+            pontos : function(){
+                var pontosB = (this.vitoria * 3) + this.empate
+            }    
+        }  
+            var jogosB = timeB.derrota + timeB.empate + timeB.vitoria
+
+        var timeC ={
+            nome: inputNomeC.value,
+            vitoria : Number(inputVitoriasC.value),
+            empate : Number(inputEmpatesC.value),
+            derrota: Number(inputDerrotasC.value),
+            pontos : function(){
+                var pontosC = (this.vitoria * 3) + this.empate
+            }
+            }
+        
+        var jogosC = timeC.derrota + timeC.empate + timeC.vitoria
+        
+
+        if(jogosA == jogosB && jogosA == jogosC){
+            if(timeA.vitoria > timeB.vitoria && timeB.vitoria>timeC.vitoria){
+                divPontos.innerHTML = `Primeiro Lugar - O ${timeA.nome} terminou o campeonato com ${timeA.pontosA} pontos 
+                                        Segundo Lugar - O ${timeB.nome} terminou o campeonato com ${timeB.pontosB} pontos 
+                                        Terceiro Lugar - O ${timeC.nome} terminou o campeonato com ${timeC.pontosC} pontos `
+            }
+            // else if(){
+
+            // }
+            // else if{
+
+            // }
+        
+
+        }else{
+            alert("Número de jogos não batem")
+        }
+    }
+</script>
+
+
+<!-- 4. Crie um programa no qual informe os nomes dos três melhores times de São Paulo (o Juventus da Mooca tem que estar contido), quantas vitórias, quantos empates e quantas derrotas 2 times de futebol possuem no campeonato. Após clicar num botão "Comparar campanhas" faça: 
+
+verifique se todos os times têm a mesma quantidade de jogos (vitórias + empates + derrotas), caso contrário, emitir alerta com mensagem explicativa.  
+
+exiba uma frase como esta: 
+
+      Primeiro Lugar - O time A terminou o campeonato com AX pontos 
+
+      Segundo Lugar - O time B terminou o campeonato com BX pontos 
+
+      Terceiro Lugar - O time C terminou o campeonato com CX pontos 
+
+  
+
+Onde o X de cada time é calculado assim: 
+
+Vitória: 3 pontos 
+Empate: 1 ponto 
+Derrota: 0 pontos 
+
+OBS. A quantidade de vitórias é usada como o critério de desempate para dois ou mais times que obtiveram a mesma pontuação. Se mesmo assim houver empate os times ocuparão a mesma posição, ou seja, por exemplo, se os dois melhores times têm a mesma pontuação e a mesma quantidade de vitórias, eles ficarão em primeiro lugar e o outro time ficará em terceiro lugar. -->

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {background-color: rgb(186, 240, 240);} 
+          .container{ display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 100px;}  
+          .form{font-family:sans-serif ; font-size: larger; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #63b1bc ; border-radius: 8px;}
+    </style>
+    <title>Atividade 2</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            Nome do time : <input id="inputNomeA">
+             Quantidade de vitórias: <input id="inputVitoriasA">
+             Quantidade de empates: <input id="inputEmpatesA">
+             Quantidade de derrotas: <input id="inputDerrotasA">
+<br><br><br>
+
+             Nome do time : <input id="inputNomeB">
+             Quantidade de vitórias: <input id="inputVitoriasB">
+             Quantidade de empates: <input id="inputEmpatesB">
+             Quantidade de derrotas: <input id="inputDerrotasB">
+            <button onclick="disputa()">
+                Comparar times
+            </button>
+            <div id="divPontos"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function disputa(){
+        var timeA ={
+            nome: inputNomeA.value,            
+            vitoria : Number(inputVitoriasA.value),
+            empate : Number(inputEmpatesA.value),
+            derrota: Number(inputDerrotasA.value)
+        }
+        var pontosA = (timeA.vitoria * 3 ) + timeA.empate  
+        
+        var timeB ={
+            nome: inputNomeB.value,
+            vitoria : Number(inputVitoriasB.value),
+            empate : Number(inputEmpatesB.value),
+            derrota: Number(inputDerrotasB.value)
+        }
+        var pontosB = (timeB.vitoria * 3 ) + timeB.empate  
+
+        divPontos.innerHTML = `O time ${timeA.nome} terminou o campeonato com ${pontosA} pontos<br> 
+                            O time ${timeB.nome} terminou o campeonato com ${pontosB}pontos`
+    }
+</script>
+
+<!-- 2. Crie um programa no qual informe os nomes dos times, quantas vitórias, quantos empates e quantas derrotas 2 times de futebol possuem no campeonato. Após clicar num botão "Comparar campanhas", exiba uma frase como esta: 
+
+      O time A terminou o campeonato com AX pontos 
+
+      O time B terminou o campeonato com BX pontos 
+
+Onde o X de cada time é calculado assim: 
+
+Vitória: 3 pontos 
+Empate: 1 ponto 
+Derrota: 0 pontos  -->

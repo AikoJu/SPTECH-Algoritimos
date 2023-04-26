@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {background-color: rgb(186, 240, 240);}
+        .container {display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 100px;}
+        .form {font-family: sans-serif; font-size: larger; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #63b1bc;border-radius: 8px;}
+    </style>
+    <title>Atividade 3</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <p>Saldo: R$<span id="spanSaldo">0.00</span></p>
+
+            <p>Depósitos: <span id="spanDeposito">0</span></p>
+
+            <p>Saques: <span id="spanSaque">0</span></p>
+
+            <button onclick="atualizar.depositos()">
+                Depositar 100
+            </button>
+            <button onclick="atualizar.saques()">
+                Sacar 20
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var saldo = 0
+    var deposito = 0
+    var saque = 0
+    var atualizar = {
+        depositos: function () {
+            saldo += 100
+            deposito++
+            spanSaldo.innerHTML = saldo
+            spanDeposito.innerHTML = deposito
+        },
+        saques: function () {
+            saldo -= 20
+            saque++
+            spanSaldo.innerHTML = saldo
+            spanSaque.innerHTML = saque
+        }
+
+    }
+
+
+</script>
+<!-- 3. Crie um programa que simule o uso de uma conta Poupança de banco do usuário. 
+
+Ela deve ter as seguintes informações na tela: 
+
+    Saldo: R$ 0.00 
+
+    Depósitos: 0 
+
+    Saques: 0 
+
+Abaixo dessas informações, deve haver os botões: "Depositar 100" e "Sacar 20". 
+
+Ao clicar no primeiro botão, o saldo na tela atualiza aumentando em 100 e o número de depósitos aumenta em 1. 
+
+Ao clicar no segundo botão, o saldo na tela atualiza reduzindo em 20 e o número de saques aumenta em 1. 
+
+ 
+
+É possível que o saldo fique negativo (azar do usuário ser gastador, né?). -->
