@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula</title>
+</head>
+<body>
+    Nome: <input type="text" id="inputNome"> <br>
+    Data de Nascimento: <input type="text" id="inputNascimento"><br>
+    E-mail: <input type="email" id="inputEmail"><br>
+    Senha: <input type="password" id="inputSenha">
+    <br><br>
+    <button onclick="cadastrar()">
+        Cadastrar
+    </button>
+</body>
+</html>
+<script>
+    function cadastrar(){
+        // var nome = inputNome.value
+        // var nascimento = inputNascimento.value
+        // var email = inputEmail.value
+        // var senha = inputSenha.value
+        
+        var usuario = {
+            nome: inputNome.value,
+            nascimento: inputNascimento.value, 
+            email: inputEmail.value,
+            senha: inputSenha.value
+        }
+        console.log(usuario)
+        alert(usuario.nascimento)
+    }
+
+</script>

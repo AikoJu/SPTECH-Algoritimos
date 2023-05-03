@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parametros</title>
+</head>
+<body>
+    1º Número: <input id="inputN1">
+    2º Número: <input id="inputN2">
+    Operação: <input id="inputOperacao">
+    <button onclick="calculo()">
+        Calcular
+    </button>
+    Resultado: <span id="spanResultado"></span>
+</body>
+</html>
+<script>
+    function dividir(param1, param2){
+        return param1 / param2
+    }
+    function multiplicar(param1, param2){
+        return param1 * param2
+    }
+    function subtrair(param1, param2){
+        return param1 - param2
+    }
+    function somar(param1, param2){
+        return param1 + param2
+    }
+
+    var operacao = ("/" || "*" ||"-"|| "+")
+
+    function calculo(){
+        var n1 = Number(inputN1.value)
+        var n2 = Number(inputN2.value)
+        var operacao = inputOperacao.value
+    }
+        if(operacao == "/"){
+            dividir(n1,n2)
+        }
+        else if(operacao == "*"){
+            multiplicar(n1,n2)
+        }
+        else if(operacao == "-"){
+            subtrair(n1,n2)
+        }
+        else if(operacao == "+"){
+            somar(n1,n2)
+        }else{
+        alert("VALOR JXNJSNX")
+        }
+
+
+</script>
