@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+</head>
+<body>
+    <h1>Lista de filmes!</h1>
+    Digite os filmes que gosta: <input id="inputFilmes">
+    <br>
+    <button onclick="filmes()">
+        Cadastrar filme
+    </button> 
+    <br><br>
+    <button onclick="favoritos()">
+        Ver Favoritos
+    </button>
+    <span id="spanLista"></span>
+</body>
+</html>
+<script>
+    var listaDeFilmes = []
+function filmes(){ 
+    var filme = inputFilmes.value
+    listaDeFilmes.push(filme)
+}
+function favoritos(){
+    var favorito = listaDeFilmes [0]
+    var menosFavorito =  listaDeFilmes [listaDeFilmes.length -1]
+    spanLista.innerHTML = `${listaDeFilmes} <br>
+                            O que mais gosta é ${favorito} <br> 
+                            E desses, o que menos gosta é ${menosFavorito}`
+}
+</script>
+<!-- (ENTREGAR) 4. Crie um programa no qual o usuário informa os nomes dos filmes que mais gosta, começando pelo seu favorito e depois o 2º que mais gosta e assim por diante. 
+
+Para ir cadastrando cada filme, ele clica em "Cadastrar filme". 
+
+Crie um botão "Ver Favoritos". Ao clicar ele, exiba os filmes favoritos, abaixo, uma frase "Total: X". 
+
+Abaixo, mostra essas frases: 
+
+ O que mais gosta é A 
+
+ E desses, o que menos gosta é B 
+
+  
+
+Onde A é o primeiro cadastrado e B, o último  -->

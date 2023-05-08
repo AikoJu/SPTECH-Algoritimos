@@ -1,0 +1,60 @@
+
+
+
+ 
+
+ 
+
+ 
+
+3. Crie um programa onde o usuário vá cadastrando os bairros para onde já morou. Ele digita o nome do lugar e vai clicar em "Cadastrar bairro". 
+
+Deve haver um outro campo, onde ele digita apenas um número, indicando o local para onde morou, a partir do número 1 (porque os usuários comuns contam as coisas a partir do 1) e clica em "Relembrar moradia". Se ele informar 1, exiba o primeiro bairro cadastrado e assim por diante. 
+
+Porém, se ele informar um número maior do que a quantidade de bairros, exiba: "Você ainda não morou num Xº bairro!" 
+
+ 
+
+ 
+
+ 
+
+(ENTREGAR) 4. Crie um programa no qual o usuário informa os nomes dos filmes que mais gosta, começando pelo seu favorito e depois o 2º que mais gosta e assim por diante. 
+
+Para ir cadastrando cada filme, ele clica em "Cadastrar filme". 
+
+Crie um botão "Ver Favoritos". Ao clicar ele, exiba os filmes favoritos, abaixo, uma frase "Total: X". 
+
+Abaixo, mostra essas frases: 
+
+ O que mais gosta é A 
+
+ E desses, o que menos gosta é B 
+
+  
+
+Onde A é o primeiro cadastrado e B, o último 
+
+ 
+
+5. Crie um programa o qual: 
+
+a) Usuário vai cadastrando os nomes de seus filmes favoritos. Digita num campo e clica em "Cadastrar" 
+
+b) Ele pode cadastrar quantos filmes quiser 
+
+c) Na medida que vai cadastrando, deve ser exibido ou atualizado um "painel" como neste exemplo: 
+
+ 
+
+  Seu filme favorito: Donnie Darko
+
+  Seu 3º filme favorito: A era do gelo 1 
+
+  Total de filmes cadastrados: 5 
+
+ 
+
+OBS: no "3º filme", caso não tenham sido cadastrados ainda 3 filmes, exibir "Ainda não existe". 
+
+OBS: o "filme favorito" é o primeiro cadastrado.
