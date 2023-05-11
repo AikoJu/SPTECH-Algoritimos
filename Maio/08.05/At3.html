@@ -27,12 +27,12 @@
     function cadastrar(){
         var bairroInserido = inputBairro.value
         listaBairro.push(bairroInserido)
+        alert("Bairro Cadastrado")
     }
     function procurar(){
         var numeroLista = Number(inputNum.value)
-        if(listaBairro.length -1  >= numeroLista){
-            var bairroSelecionado = listaBairro[numeroLista] 
-            divMensagem.innerHTML = bairroSelecionado
+        if(numeroLista <= listaBairro.length){ 
+            divMensagem.innerHTML = listaBairro[numeroLista -1]
         }else{
             divMensagem.innerHTML = `Você ainda não morou num ${numeroLista}º bairro!`
         }
