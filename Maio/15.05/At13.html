@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 13</title>
+</head>
+<body>
+    <h2>Indique o resultado:</h2>
+    <select id="selectCombo">
+        <option value="vitoria">Vitória</option>
+        <option value="empate">Empate</option>
+        <option value="derrota">Derrota</option>
+    </select>
+
+    <button onclick="registrar()">
+        Registrar Jogo
+    </button>
+    <button>
+
+    </button>
+    <div id="divPainel"></div>
+
+</body>
+</html>
+<script>
+    var listaTime = []
+    function registrar(){
+        var resultado = selectCombo.value
+        listaTime.push(resultado)
+        var vitoria = 0
+        var empate = 0
+        var derrota = 0
+        
+
+        for(var i = 0;
+            i < listaTime.length;
+            i ++){
+                if(listaTime[i] == "vitoria"){
+                    vitoria += 1
+                }else if(listaTime[i] == "empate"){
+                    empate += 1
+                }else{
+                    derrota += 1
+                }
+                var pontuacao = (vitoria*3) + empate        
+        }
+
+        divPainel.innerHTML = `
+        O time teve: ${vitoria} vitórias, ${empate} empates, ${derrota} derrotas 
+        <br><br>
+        Pontuação total: ${pontuacao} pontos 
+        <br><br>
+        Aproveitamento: ${pontuacao / listaTime.length }% `
+
+    
+    }
+
+    
+
+</script>
+<!-- 13 (desafio). Crie um programa o qual cadastre a campanha de um time de futebol num campeonato da seguinte forma: 
+
+a) Tenha um 'combo' identificado com o texto "Indique o resultado" com os itens: 
+
+  Vitória 
+
+  Empate 
+
+  Derrota 
+
+b) Ao clicar num botão "Registrar jogo", o resultado escolhido em a) é registrado em um local invisível ao usuário e um texto abaixo 
+é exibido (ou atualizado). O texto é como este: 
+
+      O time teve: V vitórias, E empates, D derrotas 
+
+      Pontuação total: X pontos 
+
+      Aproveitamento: Y% 
+
+Onde X é calculado assim: Cada vitória (V) vale 3 pontos. Cada empate (E) vale 1 ponto. Cada derrota (D) vale 0 pontos. 
+
+O Y é o total de pontos conquistados (X) dividido pelo total de pontos possíveis (ou seja, considerando que tivesse vencido todos os jogos) vezes 100. 
+
+ 
+
+c) Deve haver um campo "Indique qual jogo que saber resultado". Na medida que vai digitando, aparece um texto, abaixo do texto de b) como este: 
+
+  No 2º jogo, o time Ganhou (ou "Perdeu" ou "Empatou") 
+
+ou um texto como este, caso o valor seja de um jogo que não foi cadastrado: 
+
+  Não foi cadastrado um 9º jogo 
+
+Neste item considere que o usuário ache que 1 indica o 1º jogo. Ou seja, o usuário não imagina que o 1º é o jogo "0" na verdade. -->

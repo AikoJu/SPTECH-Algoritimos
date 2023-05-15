@@ -39,12 +39,17 @@ Pesquisar linha: <input id="inputLinhaPesquisada">
         var linhaPesquisada = inputLinhaPesquisada.value
         var validacaoLinhaPegada = listaLinhaOnibus.indexOf(linhaPesquisada)
         divMensagem.innerHTML += ``
-
-        if(validacaoLinhaPegada != -1 ){
-            divMensagem.innerHTML = `Você já pegou essa linha ${} vezes, nessa ordem: ${validacaoLinhaPegada + 1}`
-        }else{
-            divMensagem.innerHTML = `Você nunca pegou essa linha`
-        }
+        var linhaAtual = []
+            
+        for(
+                var i = 0;
+                i< listaLinhaOnibus.length;
+                i ++
+            );{
+                
+    
+            }
+        
     }
 </script>
 <!-- 10 (desafio). Crie um programa no qual o usuário vá registrando os nomes das linhas de ônibus que ele pegou durante a semana. Ele digita o nome da linha e clica em "Gravar buzão", Cada vez que o botão é clicado o programa deve mostrar a lista de linhas de ônibus abaixo do botão e em ordem inversa (do último para o primeiro). 
