@@ -10,8 +10,15 @@
 Digite as linhas de ônibus que pegou durante a semana: <input id="inputLinhadeOnibus">
     <button onclick="cadastrar()">
         Gravar buzão
-    </button>
-    <div id="divPainel"></div>
+    </button> 
+<br><br>
+
+Pesquisar linha: <input id="inputLinhaPesquisada">
+<button onclick="pesquisar()">
+    Pesquisar
+</button>
+    <div id="divPainel"></div> <br>
+    <div id="divMensagem"></div>
 </body>
 </html>
 <script>
@@ -19,12 +26,25 @@ Digite as linhas de ônibus que pegou durante a semana: <input id="inputLinhadeO
     function cadastrar(){
         var nomeLinhaOnibus = inputLinhadeOnibus.value
         listaLinhaOnibus.push(nomeLinhaOnibus)
-
+        divPainel.innerHTML = ``
         for(var i = listaLinhaOnibus.length -1;
-            i <= (listaLinhaOnibus.length - 1);
-            i --){
-                divPainel.innerHTML += `${i} - ${listaLinhaOnibus[i]} <br>` 
-            }  
+            i >= 0;
+            i --){   
+                divPainel.innerHTML += `${i + 1} - ${listaLinhaOnibus[i]} <br>` 
+            } 
+        
+    }
+
+    function pesquisar (){
+        var linhaPesquisada = inputLinhaPesquisada.value
+        var validacaoLinhaPegada = listaLinhaOnibus.indexOf(linhaPesquisada)
+        divMensagem.innerHTML += ``
+
+        if(validacaoLinhaPegada != -1 ){
+            divMensagem.innerHTML = `Você já pegou essa linha ${} vezes, nessa ordem: ${validacaoLinhaPegada + 1}`
+        }else{
+            divMensagem.innerHTML = `Você nunca pegou essa linha`
+        }
     }
 </script>
 <!-- 10 (desafio). Crie um programa no qual o usuário vá registrando os nomes das linhas de ônibus que ele pegou durante a semana. Ele digita o nome da linha e clica em "Gravar buzão", Cada vez que o botão é clicado o programa deve mostrar a lista de linhas de ônibus abaixo do botão e em ordem inversa (do último para o primeiro). 
@@ -39,3 +59,6 @@ Deve haver outro campo onde ele pesquisa por uma linha que já tenha pego. Ao cl
 
    (supondo que ele cadastrou a mesma linha na 2ª vez, na 4ª vez, na 8ª vez e na 9ª vez) 
  -->
+
+
+ 

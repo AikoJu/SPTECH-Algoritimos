@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 09</title>
+</head>
+<body>
+    <h1>Meus Projetos</h1>
+
+    Digite seu projeto: <input id="inputProjeto"><br>
+    <button onclick="cadastrar ()">
+        Registrar Projeto
+    </button> <br>
+    <button onclick="exibir()">
+        Mostrar Projetos
+        </button><br>
+    <span id="spanMensagem"></span>
+    <br>
+    <span id="spanLista"></span>
+    
+</body>
+</html>
+<script>
+    listaProjeto = [] 
+    function cadastrar(){
+        var nomeProjeto = inputProjeto.value
+        listaProjeto.push(nomeProjeto)
+
+        spanMensagem.innerHTML = `Você já fez ${listaProjeto.length} projetos. Por isso você é um profissional <span id="spanProfissional"></span>`
+
+        if(listaProjeto.length < 5){
+            spanProfissional.innerHTML = `Júnior`
+        }
+        else if (listaProjeto.length < 13 ){
+            spanProfissional.innerHTML = `Pleno desde o projeto ${listaProjeto[4]}`
+        }else{
+            spanProfissional.innerHTML = `Sênior desde o projeto ${listaProjeto[12]}`
+        }
+    }
+
+
+    function exibir(){
+        spanLista.innerHTML = ``
+        for(i = listaProjeto.length - 1;
+            i >= 0;
+            i--){
+                spanLista.innerHTML += `${i + 1} - ${listaProjeto[i]} <br>`
+            }
+
+    }
+</script>
+<!-- 9.  Crie um programa o qual:
+
+a) Pergunte para o usuário o nome de cada projeto que já criou na vida. Ele digita e clica em "Registrar projeto". Na medida que ele vai cadastrando, verifique quantos projetos já foram cadastrados e exiba o seguinte texto abaixo: 
+
+Você já fez X projetos. Por isso você é um profissional Z 
+
+X é a quantidade de projetos e Z é seu nível de experiência, segundo estas regras: 
+
+  0 a 4: Júnior 
+
+  5 a 12: Pleno desde o projeto "nome do 5º projeto" 
+
+u mais: Sênior desde o projeto "nome do 13º projeto" 
+
+b)  Tenha um botão “Mostrar Projetos” que quando clicado mostra os projetos cadastrados, um abaixo do outro, em ordem inversa ao que foi cadastrado.  -->
