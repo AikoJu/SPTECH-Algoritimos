@@ -44,15 +44,17 @@
                 }else{
                     derrota += 1
                 }
-                var pontuacao = (vitoria*3) + empate        
+                        
         }
+
+            var pontuacao = (vitoria*3) + empate
 
         divPainel.innerHTML = `
         O time teve: ${vitoria} vitórias, ${empate} empates, ${derrota} derrotas 
         <br><br>
         Pontuação total: ${pontuacao} pontos 
         <br><br>
-        Aproveitamento: ${pontuacao / listaTime.length }% `
+        Aproveitamento: ${ (pontuacao * listaTime.length) / (listaTime.length*100)}% `
 
     
     }
@@ -61,7 +63,6 @@
 
 </script>
 <!-- 13 (desafio). Crie um programa o qual cadastre a campanha de um time de futebol num campeonato da seguinte forma: 
-
 a) Tenha um 'combo' identificado com o texto "Indique o resultado" com os itens: 
 
   Vitória 
@@ -83,7 +84,7 @@ Onde X é calculado assim: Cada vitória (V) vale 3 pontos. Cada empate (E) vale
 
 O Y é o total de pontos conquistados (X) dividido pelo total de pontos possíveis (ou seja, considerando que tivesse vencido todos os jogos) vezes 100. 
 
- 
+
 
 c) Deve haver um campo "Indique qual jogo que saber resultado". Na medida que vai digitando, aparece um texto, abaixo do texto de b) como este: 
 

@@ -1,31 +1,3 @@
- 
-
-  
-
- 
-
-12. Crie um programa o qual: 
-
-a) Pergunte ao usuário o nome de um filho seu 
-
-b) Ao clicar em "Cadastrar", o nome do filho fica cadastrado num lugar que o usuário não vê, porém NÃO permita o cadastro de nomes repetidos. Em caso de tentativa de nome repetido, exiba um alert com a frase "Não pode mais de 1 filho com o mesmo nome!" 
-
-c) Ao clicar em "Atualizar Família", deve aparecer um texto como este abaixo: 
-
-   Você tem X filhos 
-
-   Seu custo mensal será aproximadamente R$Y se colocar eles em escola particular ou R$Z se eles estudarem em escola pública 
-
-Onde X é a quantidade de filhos cadastrados. 
-
-Y é o resultado do seguinte cálculo: quant de filhos x 3000, com 2 casas decimais. 
-
-Z é o resultado do seguinte cálculo: quant de filhos x 1500, com 2 casas decimais. 
-
- 
-
- 
-
 13 (desafio). Crie um programa o qual cadastre a campanha de um time de futebol num campeonato da seguinte forma: 
 
 a) Tenha um 'combo' identificado com o texto "Indique o resultado" com os itens: 
@@ -64,33 +36,7 @@ Neste item considere que o usuário ache que 1 indica o 1º jogo. Ou seja, o usu
 
  
 
-14. Crie um pequeno sistema de loja eletrônica o qual: 
-
-a) Tenha um campo "Nome do produto" e outro "Preço de compra" 
-
-b) Tenha um botão "Cadastrar". Ao clicar nele, o nome e preço ficam cadastrados em algum lugar, por enquanto invisível ao usuário 
-
-c) Tenha um botão "Relatório de estoque". Ao clicar nele, deve aparecer uma listagem dos produtos cadastrados com seu valor para venda, como no exemplo a seguir: 
-
  
-
-   Total de produtos: 2 
-
- 
-
-   Produto 1: Leite de arroz 
-
-   Preço de compra: R$1.50. Vender por R$1,87 
-
- 
-
-   Produto 2: Caixa de chocolates 
-
-   Preço de compra: R$9.00. Vender por R$11,25 
-
- 
-
-O preço de venda é sempre o valor da compra mais 25%. Ou seja, basta multiplicar o preço de compra por 1,25. 
 
  
 

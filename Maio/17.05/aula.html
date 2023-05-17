@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleatório</title>
+</head>
+<body>
+    DIGITES 5 NÚMERO DA MEGA de 1 a 20:
+    <input id="inputN1">
+    <input id="inputN2">
+    <input id="inputN3">
+    <input id="inputN4">
+    <input id="inputN5">
+    
+    <button onclick="aposta()">
+        Apostar
+    </button>
+    <div id="divTeste"></div>
+</body>
+</html>
+<script>
+    var numerosMega = []
+    var numerosMegaUsuario = []
+
+    function gerarNumerosMega() {
+        var max = 1
+        var min = 21
+        var intervalo = max - min
+
+        return min + Math.random() * intervalo;
+    } 
+    
+    function aposta(){
+    var n1 = Number(inputN1.value)
+    var n2 = Number(inputN2.value)
+    var n3 = Number(inputN3.value)
+    var n4 = Number(inputN4.value)
+    var n5 = Number(inputN5.value)
+    
+
+    var aleatorio = gerarNumerosMega();
+
+    numerosMegaUsuario.push(n1)
+    numerosMegaUsuario.push(n2)
+    numerosMegaUsuario.push(n3)
+    numerosMegaUsuario.push(n4)
+    numerosMegaUsuario.push(n5)
+    divTeste.innerHTML = "" 
+        
+    for(var i = 0;
+            i < 5;
+            i ++){
+                 
+                numerosMega.push(aleatorio)
+            }
+            
+        for (var contador = 0;
+             contador < numerosMega.length;
+             contador++){
+
+                divTeste.innerHTML += `${numerosMega[i]} `                
+             }
+         
+
+    }
+</script>
