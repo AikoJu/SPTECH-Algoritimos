@@ -7,9 +7,48 @@
     <title>Atividade 14</title>
 </head>
 <body>
-    
+    <h1>Cadastro de Produtos</h1>
+    Nome do produto: <input id="inputNomeProduto">
+    Preço de compra: <input id="inputPrecoProduto">
+    <button onclick="cadastrar()">
+        Cadastrar
+    </button>
+    <button onclick="relatorio()">
+        Relatório de estoque
+    </button>
+    <div id="divPainel"></div>
 </body>
 </html>
+<script>
+    produtosCadastradosNome = []
+    produtosCadastradosPreco = []
+    function cadastrar(){
+        var nomeProduto = inputNomeProduto.value
+        var precoProduto = Number(inputPrecoProduto.value)
+        
+        produtosCadastradosNome.push(nomeProduto)
+        produtosCadastradosPreco.push(precoProduto)
+
+    }
+
+    function relatorio(){
+         
+        
+        divPainel.innerHTML = ``
+        divPainel.innerHTML = `Total de produtos: ${produtosCadastradosPreco.length}<br>`
+        for(var i = 0;
+            i < produtosCadastradosPreco.length;
+            i ++){
+
+            divPainel.innerHTML +=`
+            Produto ${i + 1}: ${produtosCadastradosNome[i]} 
+            <br><br>
+            Preço de compra: R$${(produtosCadastradosPreco[i]).toFixed(2)}. Vender por R$${(produtosCadastradosPreco[i] * 1.25).toFixed(2)}        
+            <br><br>`
+        }
+
+    }
+</script>
 
 
 <!-- 14. Crie um pequeno sistema de loja eletrônica o qual: 
@@ -20,11 +59,8 @@ b) Tenha um botão "Cadastrar". Ao clicar nele, o nome e preço ficam cadastrado
 
 c) Tenha um botão "Relatório de estoque". Ao clicar nele, deve aparecer uma listagem dos produtos cadastrados com seu valor para venda, como no exemplo a seguir: 
 
- 
-
    Total de produtos: 2 
 
- 
 
    Produto 1: Leite de arroz 
 

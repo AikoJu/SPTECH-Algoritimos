@@ -7,16 +7,15 @@
     <title>Aleatório</title>
 </head>
 <body>
-    DIGITES 5 NÚMERO DA MEGA de 1 a 20:
+    DIGITES 3 NÚMERO DA MEGA de 1 a 10:
     <input id="inputN1">
     <input id="inputN2">
     <input id="inputN3">
-    <input id="inputN4">
-    <input id="inputN5">
-    
+
     <button onclick="aposta()">
         Apostar
     </button>
+    
     <div id="divTeste"></div>
 </body>
 </html>
@@ -26,43 +25,45 @@
 
     function gerarNumerosMega() {
         var max = 1
-        var min = 21
+        var min = 11
         var intervalo = max - min
 
-        return min + Math.random() * intervalo;
+        for (var i = 0;
+            i<3;
+            i++){
+                var aleatorio= min + Math.random() * intervalo;
+                numerosMega.push(parseInt(aleatorio))
+            }
+
     } 
     
-    function aposta(){
+    function aposta(){    
+    gerarNumerosMega()
+        
     var n1 = Number(inputN1.value)
     var n2 = Number(inputN2.value)
     var n3 = Number(inputN3.value)
-    var n4 = Number(inputN4.value)
-    var n5 = Number(inputN5.value)
-    
-
-    var aleatorio = gerarNumerosMega();
 
     numerosMegaUsuario.push(n1)
     numerosMegaUsuario.push(n2)
     numerosMegaUsuario.push(n3)
-    numerosMegaUsuario.push(n4)
-    numerosMegaUsuario.push(n5)
-    divTeste.innerHTML = "" 
-        
+
+    divTeste.innerHTML = ""
     for(var i = 0;
-            i < 5;
-            i ++){
-                 
-                numerosMega.push(aleatorio)
+        i < 3 ;
+        i++){
+            if(numerosMega[i] == numerosMegaUsuario[i] ){
+                divTeste.innerHTML = `Parabéns!<br>`
+                
+            }else{
+                divTeste.innerHTML = `Que pena não foi dessa vez!<br>`
             }
             
-        for (var contador = 0;
-             contador < numerosMega.length;
-             contador++){
-
-                divTeste.innerHTML += `${numerosMega[i]} `                
-             }
-         
+        }
+        
+    divTeste.innerHTML += `Números sorteados: ${numerosMega}<br>
+                        Seus números: ${numerosMegaUsuario}<br>`
 
     }
+    
 </script>
