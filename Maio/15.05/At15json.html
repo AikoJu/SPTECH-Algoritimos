@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 15</title>
+</head>
+<body>
+    <h1>Cadastro de Produtos</h1>
+    Nome do produto: <input id="inputNomeProduto">
+    Preço de compra: <input id="inputPrecoProduto">
+    <button onclick="cadastrar()">
+        Cadastrar
+    </button>
+    <button onclick="relatorio()">
+        Relatório de estoque
+    </button>
+    <div id="divPainel"></div>
+</body>
+</html>
+<script>
+    var listaProdutos = []
+    var maisCaroEBarato = []
+
+    function cadastrar(){
+        var nomeProduto = inputNomeProduto.value
+        var precoProduto = Number(inputPrecoProduto.value)
+        var produto = {
+            nome: nomeProduto,
+            precoProduto: precoProduto 
+        }
+
+        listaProdutos.push(produto)
+
+                if(maisCaroEBarato.length == 0){
+                    maisCaroEBarato.push(produto)
+                    
+                }
+                if(produto.precoProduto > maisCaroEBarato[0].precoProduto){
+                    maisCaroEBarato.unshift(produto)
+                    
+                }
+
+                else if(produto.precoProduto < maisCaroEBarato[maisCaroEBarato.length -1].precoProduto){
+                    maisCaroEBarato.push(produto)
+                    
+                }
+        
+}
+
+        
+
+    function relatorio(){
+        var somaProdutos = 0
+        var mediaProdutos = 0
+
+        divPainel.innerHTML = ``
+        divPainel.innerHTML = `Total de produtos: ${listaProdutos.length}<br><br>`
+
+        for(var i = 0;
+            i < listaProdutos.length;
+            i++){
+                var produtoVenda =  listaProdutos[i].precoProduto * 1.25 
+            divPainel.innerHTML +=`
+            Produto ${i + 1}: ${listaProdutos[i].nome} <br>
+            Preço de compra: R$${listaProdutos[i].precoProduto.toFixed(2)}. Vender por R$${produtoVenda.toFixed(2)}        
+            <br><br>`
+            mediaProdutos += produtoVenda
+            somaProdutos += listaProdutos[i].precoProduto
+            }
+            divPainel.innerHTML += `Nome do produto mais caro: ${maisCaroEBarato[0].nome}<br>
+                                      Nome do produto mais barato: ${maisCaroEBarato[maisCaroEBarato.length -1].nome}<br>
+                                      A soma dos preços de compra dos produtos: ${somaProdutos}<br>
+                                      A média de preço de venda dos produtos: ${(mediaProdutos / listaProdutos.length).toFixed(2) }`
+
+    }
+
+</script>
+
+
+<!--15 (desafio). Refaça a 14ª questão de tal forma que, ao final do relatório, o programa exiba: 
+
+a) O nome do produto mais caro 
+
+b) O nome do produto mais barato 
+
+c) A soma dos preços de compra dos produtos 
+
+d) A média de preço de venda dos produtos -->

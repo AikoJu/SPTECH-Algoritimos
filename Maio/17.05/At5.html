@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 05</title>
+</head>
+<body>
+    <button onclick="sortear()">
+        Jogar
+    </button>
+    <div id="divJogo"></div>
+</body>
+</html>
+<script>
+    function sortear(){
+        var min = 1
+        var max = 3
+        var intervalo = 1 + max - min
+        var aleatorio = min + Math.random()* intervalo
+        var resultado = parseInt(aleatorio)
+        
+        if(resultado == 1){
+            divJogo.innerHTML = `<img src="https://5.imimg.com/data5/LH/WO/MY-32629247/a4-printing-paper-500x500.jpg" width="200px">`
+        }
+        else if(resultado == 2){
+            divJogo.innerHTML = `<img src="https://media.tenor.com/kHcmsxlKHEAAAAAM/rock-one-eyebrow-raised-rock-staring.gif" width="200px">`
+        }                                   
+        else{
+            divJogo.innerHTML = `<img src="https://www.nicepng.com/png/detail/87-875727_sciss5-animated-scissors-cutting.png" width="200px">`
+        }
+
+    }
+</script>
+<!-- 5. Tente fazer uma pequena simulação do famoso jogo "jo ken po" (pedra, papel e tesoura) em HTML/JS: 
+
+a) Ao clicar no botão "Jogar", deve aparecer abaixo dele ou a figura de uma pedra, ou de uma folha de papel ou de uma tesoura (seja qual for a imagem, ela deve ter 200px de altura).  -->

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 02</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center;" >
+    <button onclick="sortear()">
+        Sortear time
+    </button> <br>
+    <div id="divTime"></div>
+</div>
+</body>
+</html>
+<script>
+    function sortear(){
+        var min = 1
+        var max = 4
+        var intervalo = 1 + max - min
+        var aleatorio = min + Math.random()* intervalo
+        var resultado = parseInt(aleatorio)
+        
+        divTime.innerHTML = `${resultado} <br>`
+        if(resultado == 1){
+            divTime.innerHTML += `<img src="https://logodownload.org/wp-content/uploads/2016/09/flamengo-logo-escudo-novo-1.png" width="150px">`
+        }
+        else if(resultado == 2){
+            divTime.innerHTML += `<img src="https://logodownload.org/wp-content/uploads/2016/11/corinthians-logo-0.png" width="150px">`
+        }
+        else if(resultado == 3){
+            divTime.innerHTML += `<img src="https://logodownload.org/wp-content/uploads/2016/09/sao-paulo-fc-logo.png" width="150px">`
+        }else{
+            divTime.innerHTML += `<img src="https://imagepng.org/wp-content/uploads/2018/03/escudo-palmeiras.png" width="150px">`
+        }
+
+    }
+</script>
+<!-- 2. Crie um programa o qual: 
+
+a) Ao clicar no botão "Sortear time", faz aparecer somente um dos escudos dos 4 times de futebol de maior torcida do estado de São Paulo. Independente da imagem, todas devem ter 150px de altura. -->

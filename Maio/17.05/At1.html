@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01</title>
+</head>
+<body>
+    <button onclick="sortear()">
+    Sortear
+    </button>
+    <div id="divMensagem"></div>
+</body>
+</html>
+<script>
+    function sortear(){
+        var max = 1
+        var min = 0
+        var intervalo = max - min
+        var aleatorio = Math.random() * intervalo;
+        
+        divMensagem.innerHTML = `${aleatorio} <br>`
+
+        if(aleatorio > 0.5){
+            divMensagem.innerHTML += "Eu arredondaria para 1"
+        }else{
+            divMensagem.innerHTML += "Eu arredondaria para 0"
+        }
+        
+    } 
+    
+    
+    
+</script>
+<!-- 1. Crie um programa o qual: 
+
+a) Ao clicar num botão "Sortear", apareça na página mesmo um número aleatório, entre 0 e 0,9999 
+
+b) Se esse número for maior que 0,5, exibir, abaixo, a frase "Eu arredondaria para 1".  Caso contrário, exiba "Eu arredondaria para 0"  -->

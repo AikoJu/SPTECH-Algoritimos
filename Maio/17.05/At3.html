@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 03</title>
+</head>
+<body>
+<div style="display: flex; flex-direction: column; align-items: center;" >
+    <button onclick="sortear()">
+        jogar dado
+    </button> <br>
+    <div id="divDado"></div>
+</div>
+</body>
+</html>
+<script>
+    function sortear(){
+        var min = 1
+        var max = 6
+        var intervalo = 1 + max - min
+        var aleatorio = min + Math.random()* intervalo
+        var resultado = parseInt(aleatorio)
+        
+        if(resultado == 1){
+            divDado.innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Dice-1-b.svg/557px-Dice-1-b.svg.png" width="150px">`
+        }
+        else if(resultado == 2){
+            divDado.innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Dice-2-b.svg/2048px-Dice-2-b.svg.png" width="150px">`
+        }
+        else if(resultado == 3){
+            divDado.innerHTML = `<img src="https://www.clipartmax.com/png/full/16-167949_number-3-dice-clipart-black-and-white-side-3-of-dice.png" width="150px">`
+        }
+        else if(resultado == 4){
+            divDado.innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Dice-4-b.svg/768px-Dice-4-b.svg.png" width="150px">`
+        }
+        else if(resultado == 5){
+            divDado.innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Dice-5-b.svg/2048px-Dice-5-b.svg.png" width="150px">`
+        }                                   
+        else{
+            divDado.innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Dice-6-b.svg" width="150px">`
+        }
+
+    }
+</script>
+<!-- 3. Crie um programa o qual: 
+
+a) Tenha um botão "jogar dado" 
+
+b) Ao clicar nele, sorteie um dos 6 números de um dado e mostre a figura do lado do dado que foi sorteada -->

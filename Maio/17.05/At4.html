@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 04</title>
+</head>
+<body>
+    <button onclick="sortear()">
+        Sortear Nota para aluno
+    </button> <br>    
+    <div id="divMensagem"></div>
+</body>
+</html>
+<script>
+    function sortear(){
+        var max = 11
+        var min = 0
+        var intervalo = max - min
+        var aleatorio = Math.random() * intervalo
+
+        divMensagem.innerHTML = aleatorio.toFixed(1)
+    }
+</script>
+
+<!-- 4. Crie um programa o qual: 
+
+a) Ao clicar num botão "Sortear Nota para aluno", apareça na página mesmo um número aleatório, entre 0 e 10 (podem ser sorteados números decimais, como 8.5, por exemplo). Exiba esse número sempre com 2 casas demais.  -->
