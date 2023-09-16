@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    Sexo: <select id="sexoSelect">
+            <option value="feminino">Feminino</option>
+            <option value="masculino">Masculino</option>
+            <option value="outros">Outros</option>
+            </select>
+    <br><br>
+    Idade: <input type="number" id="idadeInput" min="0" max="150">
+    <br><br>
+    <button onclick="analisar()">
+        Análisar
+    </button>
+    <br><br>
+    <span id="resposta">
+
+    </span>
+</body>
+</html>
+<script>
+    function analisar(){
+        var sexo = sexoSelect.value
+        var idade = Number(idadeInput.value)
+
+        if(sexo = "feminino"){
+            if(idade < 18){
+                resposta.innerHTML = `Você é mulher e menina`
+                sexo = 0
+            }else{
+                resposta.innerHTML = `Você é mulher maior de idade`
+                sexo = 0
+            }
+           
+        }
+        else if(sexo = "masculino"){
+            if(idade < 18){
+                resposta.innerHTML = `Você é homem e menino`
+                sexo = 0
+            }else{
+                resposta.innerHTML = `Você é homem maior de idade`
+                sexo = 0
+            }
+        }else{
+            if(idade < 18){
+                resposta.innerHTML = `Você é outros e menine`
+                sexo = 0
+            }else{
+                resposta.innerHTML = `Você é outros maior de idade`
+                sexo = 0
+            }
+        }
+    }
+</script>
+<!-- 3. Crie um diagrama de atividade que represente o seguinte programa:
+
+a) O usuário informa seu sexo e sua idade
+
+b) Caso seja homem e menor de 18 anos, exiba "Você é homem e menino"
+
+c) Caso seja homem e idade a partir de 18 anos, exiba "Você é homem maior de idade"
+
+d) Caso seja mulher e menor de 18 anos, exiba "Você é mulher e menina"
+
+e) Caso seja mulher e idade a partir de 18 anos, exiba "Você é mulher maior de idade" -->

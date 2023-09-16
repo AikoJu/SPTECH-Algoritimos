@@ -1,0 +1,267 @@
+
+
+
+
+
+
+
+
+
+4. Crie um diagrama de atividade que represente o seguinte programa:
+
+a) Leia o estado brasileiro onde o usuário nasceu. Só aceite estados válidos, insistindo novamente até que seja informado um estado brasileiro
+
+b) Leia a quantidade de filhos que o usuário tem, porém, ela deve ficar entre 0 e 15. Caso contrário, insista novamente até que fique.
+
+c) Caso a quantidade de filhos for 3, exiba "#nãotemtv  #nãoteminternet #nãotemvideogame".
+
+d) Caso a quantidade de filhos for 2, exiba "#nãotemtv".
+
+e) Caso a quantidade de filhos for 1, exiba "#nãotemvideogame".
+
+f) Caso não tenha filhos, exiba "#tv  #internet  #videogame"
+
+g) Caso a quantidade de filhos for mais de 3, exiba "#cresceiemultiplicaivos"
+
+
+
+5. Crie um diagrama de atividade que represente o seguinte programa:
+a) O usuário informa quantas horas por noite dorme
+b) Caso ele durma de 0 a 4, exiba "#zumbi"
+c) Caso ele durma mais de 4 até menos de 7, exiba "Pouca concentração"
+d) Caso ele durma de 7 a 9, exiba "Boa concentração"
+e) Caso ele durma mais de 9, exiba "Olha a preguiça!"
+
+
+
+6.  Crie um diagrama de atividade que represente o seguinte programa: 
+
+a) O usuário informa a frente e a lateral de um terreno retangular 
+
+b) O programa calcula a área do terreno 
+
+c) O programa exibe “#terrenopequeno” se a área for menor que 100, exibe “#terrenomedio” se a área estiver entre 100 e 250 ou exibe “#terrenogrande” caso a área for maior que 250 
+
+
+
+7. Crie um diagrama de atividade que represente o seguinte programa: 
+
+a) O usuário informa o salário de estagiário e o valor da faculdade. 
+
+b) O programa calcula a média diária salário líquido (salário – faculdade). Considerar 30 dias 
+
+c) Caso a média seja menor que 15, exibir “#controletotal” 
+
+d) Caso a média esteja entre 15 e 20, exibir “#ragazzonosabado” 
+
+e) Caso a média seja maior que 20 e menor 25, exibir “#cinemanamorada” 
+
+f) Caso a média é de 25 a 30, exibir “#novogame” 
+
+g) Caso a média seja maior que 30, exibir “#tobonito” 
+
+
+
+8. Crie um diagrama de atividade que represente o seguinte programa: 
+
+a) O usuário informa o sexo e se é torcedor do Palmeiras 
+
+b) Caso seja Homem e Torcedor do Palmeiras, exiba “Você é homem e seu time NÃO tem mundial” 
+
+c) Caso seja Homem e não é Torcedor do Palmeiras, exiba “Você é homem e seu time pode ser que tenha mundial” 
+
+d) Caso seja Mulher e Torcedora do Palmeiras, exiba “Você é mulher e seu time NÃO tem mundial” 
+
+c) Caso seja Mulher e não é Torcedora do Palmeiras, exiba “Você é mulher e seu time pode ser que tenha mundial” 
+
+ 
+
+9. Crie um diagrama de atividade que represente o seguinte programa: 
+
+a) Na franquia de desenhos animados "Dragon Ball" existe uma raça chamada Namekusei. Eles regeneram uma parte do corpo caso retirada a força. Porém, sempre que fazem isso perdem 10% de sua força vital (seu "ki"). Quando seu ki está em 5% ou menos, não podem mais renegerar e morrem. 
+
+b) No diagrama de atividades o Namekusei começa recebendo um golpe. 
+
+c) Verifique se o golpe retirou uma parte de seu corpo. Se sim, verifique se ainda pode regenerar. Se não, recebe outro golpe e começa tudo novamente. 
+
+b) Se ainda pode regenerar, regenera e perde ki. Se não pode, morre. Se não morreu, simplesmente recebe outro golpe e começa tudo novamente. 
+
+ 
+
+10. Crie um diagrama de atividade que: 
+
+a) Receba 2 notas de um aluno. Nenhuma delas pode ser menor que 0 nem maior que 10. 
+
+b) A frequência em aula também deve ser solicitada e só devem ser aceitos valores entre 0 e 100, insistindo-se nessa entrada até que seja informado um valor válido. 
+
+c) Calcule a média e exiba ela. 
+
+d) Exiba "Parabéns, aprovado" se a média for maior ou igual a 6 e a frequência for a partir de 70% ou "Infelizmente, reprovado" em caso contrário. 
+
+e) Pergunte se será cadastrado um novo aluno. Se "sim", volte para o item a). Em caso contrário, finalize o programa. 
+
+ 
+
+11. Crie um diagrama de atividades que registre o fluxo de um atendente de uma caixa de supermercado. 
+
+a) Receber o código do produto 
+
+b) Se o código for inválido, exibir "Código não reconhecido" e tentar novamente o que foi feito em a) 
+
+c) Em caso de código válido, registrar o preço do produto no valor total da compra 
+
+d) Perguntar se o usuário deseja "informar outro código de produto ou finalizar compra" 
+
+e) Se receber um código de outro produto, voltar para a atividade descrita em a) 
+
+f) Se receber o pedido de fim da compra, exibir "Compra finalizada. Valor total: R$?" 
+
+ 
+
+12. (desafio). Crie um diagrama de atividade que represente o seguinte programa de controle de peso em elevadores: 
+
+a) Pergunte se entrou uma pessoa no elevador. Só vá para o passo seguinte quando alguém entrar 
+
+b) Atualize o peso total no elevador com base no peso da pessoa que acabou de entrar 
+
+c) Verifique se o próximo movimento do elevador será subir ou descer 
+
+d) Caso o peso total seja maior que 400 e o próximo movimento for de subida, exiba "Alguém deve sair para eu subir", em seguida uma pessoa sai do elevador. Volte para b). 
+
+e) Caso o peso total seja maior que 500 e o próximo movimento for de descida, exiba "Alguém deve sair para eu descer", em seguida uma pessoa sai do elevador. Volte para b). 
+
+f) Quando o elevador puder subir ou descer, exiba "O elevador está [subindo/descendo]" (são 2 frases diferentes!) 
+
+g) O elevador chega ao destino. Volte para a) 
+
+OBS: Esse programa não tem um "fim" 
+
+ 
+
+13. Segundo dados oficiais de 2013, as faixas de rendas por família no Brasil são as representadas na imagem a seguir. 
+
+pirâmide 
+
+Assim, crie um diagrama de atividade que represente o seguinte programa: 
+
+a) Solicite a renda familiar da família. 
+
+b) Exiba uma dessas frases: 
+
+"Faixa vermelho escuro" 
+
+"Faixa vermelha" 
+
+"Faixa amarela" 
+
+"Faixa verde claro" 
+
+"Faixa verde" 
+
+"Faixa azul" 
+
+De acordo com a renda (vide a pirâmide). Considere os valores finais de cada faixa na pirâmide abertos (ou seja, "menor"). 
+
+ 
+
+14. Zé Buduia adora ir à feira, mas ele tem sérios problemas com cálculos matemáticos, mesmo com os cálculos simples. Crie um diagrama de atividade que será usado para criar um pequeno programa para ajudá-lo com o troco na feira. 
+
+a) Solicite o valor da mercadoria. Ela não pode ser menor nem igual a 0. 
+
+b) Solicite a quantidade comprada da mercadoria. Ela não pode ser menor nem igual a 0. 
+
+c) Solicite o valor em dinheiro que o usuário deu ao vendedor. Ele não pode ser menor nem igual a 0. 
+
+d) Calcule o valor total da compra 
+
+e) O programa verifica se há troco para ser dado. Em havendo, exiba "Vendedor entrega troco ao usuário e agradece". Caso contrário, exiba "Vendedor agradece". 
+
+
+
+15. Num determinado país existe algo chamado Bolsa Criançada. De acordo com a quantidade de filhos, o governo dá um auxílio à família. Crie um diagrama de atividades que represente como será calculado o valor desse benefício. 
+
+a) Pergunte a quantidade total de filhos menores de 18 anos 
+
+b) Em caso de nenhum filho menor de 18 anos, exiba "Sem bolsa" e finalize. Caso contrário, pergunte o nome e a idade de cada filho menor de 18 anos 
+
+c) Calcule o valor da bolsa, sendo que é de 
+
+   25,00 por filho entre 0 e 3 anos; 
+
+   20,00 por filho com mais de 3 anos até 16 anos; 
+
+   15,00 por filho com mais de 16 anos. 
+
+d) Exiba o valor total da bolsa e finalize 
+
+ 
+
+16. Crie um diagrama de atividade que represente um programa que calcula quanto será o salário líquido do usuário: 
+
+a) O usuário informa seu salário bruto 
+
+b) O programa pergunta se ele recebe algum benefício ("sim" ou "não"). Se "sim", pergunta o nome e valor do benefício, enquanto o usuário ficar respondendo que "sim". Quando responder "não", vá para c) 
+
+c) O programa calcula o desconto do INSS, que é de 10% do bruto 
+
+d) O programa calcula o desconto do IR, que é de 20% do bruto 
+
+e) O programa subtrai do bruto os descontos e depois soma os valores dos benefícios. Esse valor é o valor do salário líquido 
+
+f) O programa exibe o salário líquido 
+
+ 
+
+17. (desafio). Crie um diagrama de atividade que represente o seguinte programa de caixa eletrônico do Banco Itadinho: 
+
+Premissa: Num determinado banco, o usuário tem o direito de fazer 3 saques gratuitos no mês. A partir do 4º ele paga uma tarifa de R$2,00 antes da efetivação do saque.  
+
+a) O usuário insere seu cartão no caixa eletrônico do banco. Caso a leitura do chip tenha sido realizada com sucesso, vá para b). Caso contrário, exiba "retire e insira o cartão novamente" e repita a). 
+
+b) O cartão pode estar ou não bloqueado. Caso esteja bloqueado, exibir "Cartão bloqueado! Procure seu gerente!" e finalize. Caso contrário, vá para c) 
+
+c) O caixa solicita a senha do cartão. O usuário podo errar até 2 vezes, pois na 3ª o caixa exibe "Cartão bloqueado! Procure seu gerente!" e finaliza. Caso a senha correta seja inserida em até 2 tentativas, vá para d) 
+
+d) O usuário escolhe entre as opções "Extrato", "Saque" ou "Sair". Caso "Extrato", vá para e), caso "Saque" vá para f). Caso "Sair", exibir "Retire o cartão" e finalize. 
+
+e) Exiba o extrato e volte para d) 
+
+f) Em caso de "Saque", solicite o valor do saque. Caso seja até o 3º saque no mês, efetue o saque e atualize o saldo em conta e volte para d). Caso já seja a partir do 4º saque no mês e o usuário ainda tenha mais de R$2,00 em conta, desconte os R$2,00 de taxa, efetue o saque e atualize o saldo em conta e volte para d). Caso tenha até R$2,00 em conta e já seja a partir do 4º  saque, exiba "Saldo insuficiente" e volte para d) 
+
+ 
+
+18. Crie um diagrama de atividade que represente um programa de um jogo de dadinhos: 
+
+a) O programa sorteia o valor do dado do 1º jogador 
+
+b) O programa sorteia o valor do dado do 2º jogador 
+
+c) O programa verifica qual dado teve maior valor. Em caso de empate, ele exibe "Empate". Em caso de vitória do primeiro, "O 1º venceu". Em caso de vitória do segundo, "O 2º venceu". 
+
+d) O programa pergunta: "Nova partida? S ou N". Em caso de "S", volta para a). Em caso de "N"... 
+
+e) Exibe "O jogo acabou apos P partidas. 1º jogador: V1 vitórias. 2º jogador: V2 vitórias".
+
+
+
+19. (desafio) Crie um diagrama de atividade que represente o seguinte programa: 
+
+a) Receba o primeiro fator de uma multiplicação; 
+
+b) Receba o segundo fator de uma multiplicação; 
+
+c) Exiba o resultado da multiplicação, porém a multiplicação deve ser feita com somas sucessivas. 
+
+ 
+
+20. (desafio). Crie um diagrama de atividade que represente o seguinte programa: 
+
+a) Receba o dividendo; 
+
+b) Receba o divisor; 
+
+c) Exiba o resultado da divisão, porém a divisão deve ser feita com subtrações sucessivas; 
+
+d) Exiba o resto da divisão; 
+
+e) Volte para o item a). 

@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aleatório</title>
 </head>
-<body>
+<body onload="gerarNumerosMega()">
     DIGITES 3 NÚMERO DA MEGA de 1 a 10:
-    <input id="inputN1">
-    <input id="inputN2">
-    <input id="inputN3">
+    <input type="number" min="1" max="9" maxlength="1" id="inputN1">
+    <input type="number" min="1" max="9" maxlength="1" id="inputN2">
+    <input type="number" min="1" max="9" maxlength="1" id="inputN3">
 
     <button onclick="aposta()">
         Apostar
@@ -25,7 +25,7 @@
 
     function gerarNumerosMega() {
         var min = 1
-        var max = 11
+        var max = 10
         var intervalo = max - min
 
         for (var i = 0;
@@ -34,20 +34,17 @@
                 var aleatorio= min + Math.random() * intervalo;
                 numerosMega.push(parseInt(aleatorio))
             }
-
+            alert(numerosMega)
     } 
     
-    function aposta(){    
-    gerarNumerosMega()
-        
+    function aposta(){  
+    // numerosMega = []
+    numerosMegaUsuario = []  
     var n1 = Number(inputN1.value)
     var n2 = Number(inputN2.value)
     var n3 = Number(inputN3.value)
-
-    numerosMegaUsuario.push(n1)
-    numerosMegaUsuario.push(n2)
-    numerosMegaUsuario.push(n3)
-
+   
+    numerosMegaUsuario.push(n1,n2,n3)
     divTeste.innerHTML = ""
     for(var i = 0;
         i < 3 ;
